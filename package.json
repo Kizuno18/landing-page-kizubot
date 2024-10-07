@@ -1,0 +1,51 @@
+{
+  "name": "lp-kizubot",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "node --test scripts/seo.test.mjs lib/en-route.test.mjs && next build && node scripts/seo-smoke.mjs --start-server",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "icons": "node scripts/generate-icons.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:seo": "node --test scripts/seo.test.mjs lib/en-route.test.mjs",
+    "test:seo:html": "node scripts/seo-smoke.mjs --start-server"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "latest",
+    "@radix-ui/react-accordion": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@radix-ui/react-tabs": "latest",
+    "@serwist/next": "^9.5.11",
+    "@vercel/analytics": "^2.0.1",
+    "child_process": "latest",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "feed": "^5.2.0",
+    "framer-motion": "latest",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.454.0",
+    "next": "15.5.8",
+    "next-themes": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "^22",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "playwright": "^1.60.0",
+    "png-to-ico": "^3.0.1",
+    "postcss": "^8.5",
+    "serwist": "^9.5.11",
+    "sharp": "^0.34.5",
+    "tailwindcss": "latest",
+    "typescript": "^5"
+  }
+}
