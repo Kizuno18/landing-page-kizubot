@@ -1,0 +1,581 @@
+@import "tailwindcss";
+
+/* Converted to Tailwind CSS 4.x CSS-first configuration with @theme directive */
+@theme {
+  /* KizuBot HUD Design System — Cyberpunk overlay palette */
+  --color-background: #020008;
+  --color-foreground: #F1F5F9;
+  --color-card: #0A0A0F;
+  --color-card-foreground: #F1F5F9;
+  --color-popover: #0A0A0F;
+  --color-popover-foreground: #F1F5F9;
+  --color-primary: #00CCFF;
+  --color-primary-foreground: #020008;
+  --color-secondary: #FFAA00;
+  --color-secondary-foreground: #020008;
+  --color-muted: #111111;
+  --color-muted-foreground: #888888;
+  --color-accent: #AA66FF;
+  --color-accent-foreground: #F8FAFC;
+  --color-destructive: #FF4444;
+  --color-destructive-foreground: #F8FAFC;
+  --color-border: rgba(0, 204, 255, 0.15);
+  --color-input: rgba(0, 204, 255, 0.15);
+  --color-ring: #00CCFF;
+
+  /* Semantic brand colors from UI_DESIGN_SYSTEM.md */
+  --color-brand-cyan: #00CCFF;
+  --color-brand-amber: #FFAA00;
+  --color-brand-purple: #AA66FF;
+  --color-brand-green: #44FF44;
+  --color-brand-red: #FF4444;
+  --color-brand-dark: #020008;
+  --color-brand-glow: #00CCFF;
+
+  /* Border radius tokens */
+  --radius: 0.5rem;
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  /* Font families */
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+
+  /* Animation durations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.8s ease-out;
+  --animate-scale-in: scale-in 0.5s ease-out;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-cursor-blink: cursor-blink 1s step-end infinite;
+}
+
+/* Gold Days theme — original palette from before the rebrand (53a509c).
+   #FFD700 gold + #4b0082 deep purple. Primary/secondary swapped because
+   current components use text-primary as main accent. */
+[data-theme="gold-days"] {
+  --color-background: #000000;
+  --color-foreground: #F1F5F9;
+  --color-card: #0D0005;
+  --color-card-foreground: #F1F5F9;
+  --color-popover: #0D0005;
+  --color-popover-foreground: #F1F5F9;
+  --color-primary: #FFD700;
+  --color-primary-foreground: #1a0033;
+  --color-secondary: #4b0082;
+  --color-secondary-foreground: #FFD700;
+  --color-muted: #1a0033;
+  --color-muted-foreground: #94A3B8;
+  --color-accent: #6a0dad;
+  --color-accent-foreground: #FFD700;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #F8FAFC;
+  --color-border: rgba(75, 0, 130, 0.3);
+  --color-input: rgba(75, 0, 130, 0.3);
+  --color-ring: #FFD700;
+  --color-brand-cyan: #FFD700;
+  --color-brand-amber: #FFD700;
+  --color-brand-purple: #4b0082;
+  --color-brand-glow: #FFD700;
+  --radius: 0.75rem;
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+}
+
+/* Gold Days: strip the Spatial Hacker HUD visual language */
+[data-theme="gold-days"] .section-tag {
+  display: none;
+}
+
+[data-theme="gold-days"] .hud-brackets::before,
+[data-theme="gold-days"] .hud-brackets::after {
+  display: none;
+}
+
+[data-theme="gold-days"] .grid-bg {
+  background-image: none;
+}
+
+[data-theme="gold-days"] .terminal-cursor::after {
+  display: none;
+}
+
+/* Hide HUD-only labels, show classic numbered circles */
+[data-theme="gold-days"] .hud-label {
+  display: none;
+}
+
+.classic-label {
+  display: none;
+}
+
+[data-theme="gold-days"] .classic-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="gold-days"] .btn-primary {
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: var(--color-primary);
+}
+
+[data-theme="gold-days"] .cta-outline {
+  border-radius: 9999px;
+  border-width: 2px;
+}
+
+/* Gold Days: section headings in gold (were text-secondary/#FBBF24 before e7aa85c) */
+[data-theme="gold-days"] h2 {
+  color: var(--color-primary);
+}
+
+/* Gold Days: no monospace decorative font — revert to sans */
+[data-theme="gold-days"] {
+  --font-mono: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* Base styles without @layer directive (not needed in Tailwind 4.x) */
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  /* Clip the page horizontally at the root so it can't be panned/pinched
+     sideways into the dark background gutter. This must be on <html> (not just
+     <body>) to also contain fixed/absolute children like the header. `clip`
+     keeps position: sticky working (unlike `hidden`). */
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: clip;
+}
+
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in oklch, var(--color-muted-foreground) 30%, transparent);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in oklch, var(--color-muted-foreground) 50%, transparent);
+}
+
+/* Primary CTA button — cyan bg with amber border, sharp corners */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+  transition: all 0.2s;
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  padding: 1rem 2rem;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-secondary) 20%, transparent);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn-primary:hover {
+  background-color: color-mix(in oklch, var(--color-secondary) 85%, white);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--color-secondary) 35%, transparent);
+  border-color: color-mix(in oklch, var(--color-secondary) 80%, white);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-ring);
+}
+
+.btn-primary:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Default section spacing */
+.section {
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+}
+
+/* Background patterns */
+.bg-hero-pattern {
+  background-image: url("/images/bg-hero-gears.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-cta-pattern {
+  background-image: url("/images/bg-cta-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-primary-pattern {
+  background: linear-gradient(180deg, rgba(0,0,0,0.97) 0%, rgba(5,5,15,0.97) 50%, rgba(0,0,0,0.97) 100%);
+}
+
+.bg-secondary-pattern {
+  background: linear-gradient(180deg, rgba(0,0,0,0.93) 0%, rgba(8,5,12,0.93) 50%, rgba(0,0,0,0.93) 100%);
+}
+
+/* HUD panel components — dark bg with colored borders and glow */
+.hud-panel {
+  background-color: color-mix(in srgb, var(--color-card) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--color-primary) 8%, transparent), inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.hud-panel-amber {
+  background-color: color-mix(in srgb, var(--color-card) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 30%, transparent);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--color-secondary) 8%, transparent), inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.hud-panel-purple {
+  background-color: color-mix(in srgb, var(--color-card) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--color-accent) 8%, transparent), inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Monospace section tag — e.g. "> FEATURES" above headings */
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* Subtle grid background overlay */
+.grid-bg {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-primary) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 3%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-secondary) 15%, transparent);
+}
+
+/* Theme-aware glow shadow utilities */
+.shadow-glow-primary-sm {
+  box-shadow: 0 0 15px color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+.shadow-glow-primary {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+.shadow-glow-secondary {
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-secondary) 12%, transparent);
+}
+
+/* HUD corner brackets decoration */
+.hud-brackets {
+  position: relative;
+}
+
+.hud-brackets::before,
+.hud-brackets::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--color-primary);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hud-brackets::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.hud-brackets::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* Terminal blinking cursor */
+.terminal-cursor::after {
+  content: "_";
+  animation: cursor-blink 1s step-end infinite;
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 8rem 2rem;
+  }
+}
+
+/* Responsive container */
+.container-responsive {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Text wrap utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 40%, transparent);
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes boot-sequence {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    filter: brightness(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Focus ring utility */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-ring);
+}
+
+/* Hide scrollbar utility for horizontal scroll areas */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Body scroll lock for mobile menu */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Horizontal scroll fade hint — shows more content exists to the right */
+.scroll-fade-right {
+  position: relative;
+}
+
+.scroll-fade-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--color-background));
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .scroll-fade-right::after {
+    display: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .bg-hero-pattern,
+  .bg-cta-pattern {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+@keyframes anniversary-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.anniversary-balloon-left { animation: anniversary-float 7s ease-in-out infinite; }
+.anniversary-balloon-right { animation: anniversary-float 8s ease-in-out -3s infinite; }
+
+@media (max-width: 639px) {
+  .anniversary-balloons { opacity: 0.45; }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
