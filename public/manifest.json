@@ -1,0 +1,117 @@
+{
+  "id": "/",
+  "name": "KizuBot - Advanced AI Bot for PokeXGames",
+  "short_name": "KizuBot",
+  "description": "The most advanced AI-powered automation bot for PokeXGames. Features 100% AFK farming, shiny hunting, auto-catch, auto-battle, and more.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#000000",
+  "theme_color": "#A855F7",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["games", "utilities", "entertainment"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/shot-cavebot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Navegação Cavebot do KizuBot"
+    },
+    {
+      "src": "/screenshots/shot-engine.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Engine de automação do KizuBot"
+    },
+    {
+      "src": "/screenshots/shot-alarms.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Sistema de alarmes do KizuBot"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "828x1792",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Página inicial do KizuBot"
+    },
+    {
+      "src": "/screenshots/mobile-features.png",
+      "sizes": "828x1792",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Recursos do KizuBot"
+    },
+    {
+      "src": "/screenshots/mobile-how.png",
+      "sizes": "828x1792",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Como o KizuBot funciona"
+    },
+    {
+      "src": "/screenshots/mobile-results.png",
+      "sizes": "828x1792",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Resultados reais de usuários"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Preços e Compra",
+      "short_name": "Comprar",
+      "description": "Veja os planos e adquira o KizuBot",
+      "url": "/?source=pwa#pricing",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Documentação",
+      "short_name": "Docs",
+      "description": "Guias de instalação e configuração",
+      "url": "/docs?source=pwa",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Changelog",
+      "short_name": "Changelog",
+      "description": "Novidades e atualizações recentes",
+      "url": "/changelog?source=pwa",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
