@@ -1,0 +1,36 @@
+---
+slug: "pokexgames-kizubot-ai-adicionada-opcao-em-combat-adicionada-opcao-em-combat-0815"
+date: "2025-08-15"
+tags: ["new-feature", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "adicionada opção em combat & adicionada opção em combat"
+  summary: "Adicionada opção em combat pra que sempre que aparecer a \"!\" amarela indicando que algum pokémon da box está prestes a sumir.. parar e matar (ON/OFF). Adicio..."
+en:
+  title: "Added option in Combat so that whenever & Added option in Combat"
+  summary: "Added option in Combat so that whenever the yellow \"!\" appears indicating that a Pokémon in the box is about to disappear... stop and kill (ON/OFF). Added op..."
+---
+
+::pt
+- adicionada opção em combat pra que sempre que aparecer a "!" amarela indicando que algum pokémon da box está prestes a sumir.. parar e matar (ON/OFF)
+- adicionada opção em combat minMonstersToOrder pra apenas começar a dar order quando tiver x monstros na tela
+- corrigido problema que fazia nenhum item configurado na aba ItemUsage funcionar
+- otimizações gerais na **IA**
+- corrigido problema que em rara ocasião "quebrava" a lógica de lidar com extraordinários e ignorava eles
+- ensinamos a **IA** em findBestTileForCombo uma forma de "ir alguns quadrados em direção ao ultimo pokemon da box para que possa chegar no box radius antes portanto soltar combo antes e matar antes"
+- adicionada opção na aba healling prioritizeTargetMovesAfterRevive, no segundo revive (quando esta usando forceReviveByCds) a **IA** utilizará primeiro as target move nos pokemons restantes se tiver poucos pokemons e se usar so target não usará revive
+- Agora em Farming é possivel escolher retomar o cavebot de um ponto anterior ou de um ponto adiante ou do ponto mais proximo, após qualquer coleta (configurável)
+- adicionado na aba Combat throwBallWhenPlayerOnScreen ela vai adicionar os corpos de criaturas derrotadas a lista de catch e começar a jogar a pokebola apenas se tiver players na tela (util pra mentir que esta fazendo hunt + captura e evitar pedidos de party)
+::
+
+::en
+- Added option in Combat so that whenever the yellow "!" appears indicating that a Pokémon in the box is about to disappear... stop and kill (ON/OFF)
+- Added option in Combat minMonstersToOrder to only start giving orders when there are X monsters on screen
+- Fixed an issue that caused no item configured in the ItemUsage tab to work
+- General AI optimizations
+- Fixed a rare issue that "broke" the logic for dealing with extraordinaries and ignored them
+- Taught the AI in findBestTileForCombo a way to "move a few squares toward the last Pokémon in the box so it can reach the box radius sooner, thus releasing the combo earlier and killing sooner"
+- Added option in the Healing tab prioritizeTargetMovesAfterRevive: on the second revive (when using forceReviveByCds) the AI will first use target moves on the remaining Pokémon if there are few Pokémon left, and if using only target moves, it will not use revive
+- In Farming, it is now possible to choose to resume the cavebot from a previous point, from a later point, or from the nearest point after any gathering (configurable)
+- Added in the Combat tab throwBallWhenPlayerOnScreen: it will add the corpses of defeated creatures to the catch list and start throwing Poké Balls only if there are players on screen (useful to pretend you’re hunting + capturing and to avoid party requests)
+::
