@@ -1,0 +1,56 @@
+---
+slug: "pokexgames-kizubot-ai-cavebot-engine-fishing-0823"
+date: "2025-08-23"
+tags: ["new-feature", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "cavebot, engine, Fishing"
+  summary: "Corrigido avoidLostMultiplier no painel que mesmo ativado quando recarregava a pagina aparecia desativado. Corrigidas algumas verificações da IA nos alarmes."
+en:
+  title: "Added \"Advanced\" tab in the Fishing & Added descaralhadoMode in the Fishing"
+  summary: "Fixed avoidLostMultiplier in the panel which, even when enabled, appeared disabled after reloading the page. Fixed some AI checks in alarms."
+---
+
+::pt
+- corrigido avoidLostMultiplier no painel que mesmo ativado quando recarregava a pagina aparecia desativado
+- corrigidas algumas verificações da **IA** nos alarmes
+- corrigido bug que não apitava Mega no alarme
+- corrigido bug que não ignorava extraordinary de npcs da brotherhood
+- leve otimização no **cavebot**
+- otimização na movimentação do loot, agora parece mais humano
+- agora ao finalizar o combo não corre mais a chance de ele tentar ir pro waypoint "de trás"
+- agora ao finalizar o combo vai procurar o "proximo waypoint"
+- deixamos a configuração de berry mais amigável para o usuário no painel
+- aumentado o limite máximo configurável de "Delay Before Revive" na aba **engine**
+- resolvido conflito do "forceComboAtHealth deve ser menor que stopLureAtHealth" caso apenas um deles estiver ativado
+- resolvido resquícios de eventual zig zag durante o loot
+- adicionada aba "Advanced" na aba **Fishing** para configuração avançada
+- adicionado descaralhadoMode na aba fishing, veja a descrição lá
+- quando o modo descaralhado estiver desativado, agora é possível escolher entre os tipos de pesca leia descrição na aba
+- adicionado **spoiler** explicativo sobre cada tipo de pesca na aba **Fishing**, similar ao sistema de spam da aba **Alarm**
+- otimizações gerais em como a **IA** processa, vê e interpreta as criaturas da tela
+- corrigido problema de "diagonal sem motivo" durante o waitForLure
+- corrigido problema de morrer do nada e saia lurando sem poke pq a **IA** não detectava o revive porque não tinha carregado totalmente o bot
+::
+
+::en
+- Fixed avoidLostMultiplier in the panel which, even when enabled, appeared disabled after reloading the page
+- Fixed some AI checks in alarms
+- Fixed bug where Mega wouldn’t trigger the alarm
+- Fixed bug where extraordinary NPCs from the Brotherhood weren’t ignored
+- Slight optimization in the cavebot
+- Optimized loot movement, now looks more human
+- After finishing a combo, it no longer risks going to the "backward" waypoint
+- After finishing a combo, it will now look for the "next waypoint"
+- Made the berry configuration more user-friendly in the panel
+- Increased the maximum configurable limit for "Delay Before Revive" in the Engine tab
+- Fixed conflict where "forceComboAtHealth must be lower than stopLureAtHealth" when only one of them was enabled
+- Fixed residual zig-zag issues during loot
+- Added "Advanced" tab in the Fishing section for advanced configuration
+- Added descaralhadoMode in the Fishing tab, see the description there
+- When descaralhadoMode is disabled, it’s now possible to choose between fishing types, read the description in the tab
+- Added explanatory **spoiler** for each fishing type in the Fishing tab, similar to the spam system in the Alarm tab
+- General optimizations in how the AI processes, sees, and interprets creatures on screen
+- Fixed "diagonal without reason" issue during waitForLure
+- Fixed issue where the character would die unexpectedly and leave luring without a Pokémon because the AI didn’t detect the revive since the bot wasn’t fully loaded
+::
