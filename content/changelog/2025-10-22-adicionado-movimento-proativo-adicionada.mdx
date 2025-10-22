@@ -1,0 +1,50 @@
+---
+slug: "pokexgames-kizubot-ai-adicionado-movimento-proativo-adicionada-nova-opcao-sui-1022"
+date: "2025-10-22"
+tags: ["new-feature", "improvement"]
+hasEnglish: true
+pt:
+  title: "Adicionado movimento proativo & Adicionada nova opção 'Suicide"
+  summary: "Order during lure saiu da manutenção. Order in best tile to finish box saiu da manutenção."
+en:
+  title: "Added proactive movement toward & Added new option 'Suicide on Staff'"
+  summary: "Order during lure is now out of maintenance. Order in best tile to finish box is now out of maintenance."
+---
+
+::pt
+- Order during lure saiu da manutenção
+- Order in best tile to finish box saiu da manutenção
+- Melhorado o posicionamento do combo para em "Order in best tile to finish box " no final do lure
+- Adicionado movimento proativo em direção ao inimigo mais próximo após um revive no meio do combo, evitando tempo de espera com monstros stunados
+- Otimizado o pathfinding para posicionamento de combo, priorizando espaços abertos para evitar paredes e melhorar a cobertura das magias em área
+- Adicionada nova opção 'Suicide on Staff' para resposta automática à detecção de GM
+- Adicionada opção 'Keep Distance from Monsters' para o Pokémon ativo, ideal para tarefas que não envolvem combate direto
+- Adicionada funcionalidade opcional 'Auto Switch Hunt on Kill' para carregar waypoints dinamicamente com base no nome do monstro derrotado
+- Adicionada lista de 'Criaturas Prioritárias' para interromper o lure sem alterar a lógica de combate padrão, permitindo um combate mais eficiente contra monstros específicos
+- Acrescentar move proximo ao ultimo pokemon do lure
+- Após o combo (no caso de ter que usar mais de um revive pra finalizar) dar ordem para o pokémon mais próximo em vez de aguardar ele se aproximar ( há casos do Pokémon inimigo ficar em efeito stun e o char ficar aguardando ele ir pro box Radius para finalizar o mesmo )
+- impedir os pokes de irem para a parede, sei la, detectar a parede e pisos caminhaveis e sempre que o poke estiver indo perto das paredes onde os inimigos não o alcancariam dar order pra algum lugar util
+- Bot "sem querer" se matar na hunt ao aparecer alguém da staff ou com nick de ADM (fazer em forma de action ou na aba interactions em general em gm handling)
+- Keepdistance from other pokemons -> igual keep distance do player mas para o pokemon -> intuíto de permitir farm de madeira mais suave com bot nos explouds
+- Assim que matar um mob ele procurar uma waypoint com o nome igual ou semelhante ao do mob e iniciar a waypoint, deixando essa opção opcional no bot
+- Diferenciação de Extraordinario e Pokemon com uma contagem especial para parar lure
+::
+
+::en
+- Order during lure is now out of maintenance
+- Order in best tile to finish box is now out of maintenance
+- Improved combo positioning to order in best tile on the end of the lure
+- Added proactive movement toward the nearest enemy after a revive during combo, avoiding idle time with stunned monsters
+- Optimized pathfinding for combo positioning, prioritizing open spaces to avoid walls and improve AoE spell coverage
+- Added new option 'Suicide on Staff' for automatic response to GM detection
+- Added 'Keep Distance from Monsters' option for the active Pokémon, ideal for tasks that don’t involve direct combat
+- Added optional 'Auto Switch Hunt on Kill' feature to dynamically load waypoints based on the defeated monster’s name
+- Added 'Priority Creatures' list to interrupt the lure without changing the standard combat logic, enabling more efficient fights against specific monsters
+- Add a "move" command near the last Pokémon of the lure.
+- After a combo (in cases where more than one revive is needed to finish), issue an order to the nearest Pokémon instead of waiting for it to approach. (There are cases where the enemy Pokémon gets stunned and the character keeps waiting for it to enter the box radius to finish it.)
+- Prevent Pokémon from moving toward walls — detect walls and walkable tiles, and whenever a Pokémon is heading near walls where enemies can’t reach them, issue an order to move to a more useful position.
+- Make the bot “accidentally” die while hunting if someone from the staff or a player with “ADM” in their name appears (implement this as an action or in the "interactions" tab under "GM handling").
+- Add “keep distance from other Pokémon” → same logic as player’s keep distance, but applied to the Pokémon → purpose: allow smoother wood farming with the bot among Explouds.
+- As soon as a mob is killed, make the bot look for a waypoint with the same or similar name as the mob and start that waypoint automatically (make this option toggleable in the bot).
+- Add differentiation between “Extraordinary” and Pokémon with a special count for stopping the lure.
+::
