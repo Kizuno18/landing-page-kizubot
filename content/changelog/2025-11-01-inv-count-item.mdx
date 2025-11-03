@@ -1,0 +1,60 @@
+---
+slug: "pokexgames-kizubot-ai-inv-count-item-1101"
+date: "2025-11-01"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "!inv, !count, !item"
+  summary: "Corrigido bug que não preenchia a actionbar quando cê criava actions de uso de item e consequentemente n usava os itens. Corrigido alguns problemas no sistem..."
+en:
+  title: "!inv, !count, !item"
+  summary: "Fixed a bug that didn’t populate the actionbar when creating item-use actions, which consequently prevented items from being used. Fixed some issues in the s..."
+---
+
+::pt
+- corrigido bug que não preenchia a actionbar quando cê criava actions de uso de item e consequentemente n usava os itens
+- corrigido alguns problemas no sistema de detectar players assistindo sua CAM
+- corrigida action de "abrir janelinha de private message com qualquer player que mandar mensagem" (agora n fica focando na janela sem motivo)
+- o FPS voltou a ser limitado a 16 porque o desperdício de recursos tava causando instabilidades desnecessárias
+- sobre isso, a VNC limita a 16fps a transmissão, então mesmo que vc pense que fps 120 seria diferente, tecnicamente não é (pela VNC)
+- ensinamos a **IA** a reconhecer corretamente o canal de "Report"
+- melhoramos como a **IA** se comporta quando o GM aparece na tela - resumido, motivo sigiloso
+- corrigimos a **IA** pra não confundir os canais de TV e Party (bug raro, mas acontecia)
+- adicionados comandos novos `!nickname tv` - `!nickname panic` - `!nickname party` (digite !ingame pra ver explicações)
+- adicionados comandos novos **!inv** - **!count** - **!item** (digite !ingame pra ver explicações)
+- melhorada responsividade geral da aba **Statistics** na visão mobile
+- na aba actions na action e say e say_random foram adicionados dois novos canais possíveis **(TV e PARTY)**
+- adicionadas condições na aba **actions** pokemon_caught e rare_item_looted
+- removido buy_item_market da aba actions pois temos buy_cheapest_item_market
+- corrigido na aba **actions** a action toggleModule que tinha módulos que nem existem e adicionados existentes restantes
+- adicionado novo alarme **ativado por padrão** - reportMessage (Avisa quando receber uma mensagem no canal Report)
+- corrigido pequeno problema que causava alguns delays nos avisos de licenças
+- ajustados 17 presets de "auto use item" dos itens de 0.5 de drop pra funcionar so fora de pz
+- corrigido visualização das sessões na aba **Statistics** que não aparecia corretamente no celular
+- corrigido preset de TV watcher check trocado pra 30s
+- removido do painel o padrão de configs "legado" de actions que veio do módulo ItemUsage 4 meses atrás
+::
+
+::en
+- fixed a bug that didn’t populate the actionbar when creating item-use actions, which consequently prevented items from being used
+- fixed some issues in the system that detects players watching your CAM
+- fixed the action “open private message window with any player who sends a message” (now it no longer focuses the window for no reason)
+- FPS has been limited back to 16 because the resource waste was causing unnecessary instability
+- regarding this, VNC limits transmission to 16fps, so even if you think 120fps would be different, technically it isn’t (through VNC)
+- taught the **AI** to correctly recognize the “Report” channel
+- improved how the **AI** behaves when a GM appears on screen – summarized, confidential reason
+- fixed the **AI** so it no longer confuses TV and Party channels (rare bug, but it happened)
+- added new commands `!nickname tv` – `!nickname panic` – `!nickname party` (type !ingame for explanations)
+- added new commands **!inv** – **!count** – **!item** (type !ingame for explanations)
+- improved general responsiveness of the **Statistics** tab on mobile view
+- in the actions tab, in action, say, and say_random, two new possible channels were added **(TV and PARTY)**
+- added new conditions in the **actions** tab: pokemon_caught and rare_item_looted
+- removed buy_item_market from the **actions** tab because we have buy_cheapest_item_market
+- fixed in the **actions** tab the toggleModule action, which had modules that didn’t even exist, and added the remaining existing ones
+- added a new alarm **enabled by default** – reportMessage (notifies when receiving a message in the Report channel)
+- fixed a small issue that caused some delays in license warnings
+- adjusted 17 presets of “auto use item” for 0.5 drop-chance items to work only outside PZ
+- fixed visualization of sessions in the **Statistics** tab that didn’t display correctly on mobile
+- fixed the TV watcher check preset, changed to 30s
+- removed the legacy default action settings from the panel that came from the ItemUsage module 4 months ago
+::
