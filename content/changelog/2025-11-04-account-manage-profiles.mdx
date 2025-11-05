@@ -1,0 +1,32 @@
+---
+slug: "pokexgames-kizubot-ai-account-manage-profiles-1104"
+date: "2025-11-04"
+tags: ["new-feature", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Account, Manage Profiles"
+  summary: "Ensinamos a IA a reinciar todo o PXG e bot caso o bot não tenha carregado completamente:. Implementado sistema de desligar a sua maquina, caso vc fique mais ..."
+en:
+  title: "Account, Manage Profiles"
+  summary: "We taught the AI to restart the entire PXG and bot in case the bot doesn’t fully load:. Implemented a system that shuts down your machine if you stay logged ..."
+---
+
+::pt
+- ensinamos a **IA** a reinciar todo o PXG e bot caso o bot não tenha carregado completamente:
+- implementado sistema de desligar a sua maquina, caso vc fique mais de 15min deslogado motivos:
+- implementada otimizações de "retentativa" então caso a API do KizuBot estiver offline, a **IA** vai tentar novamente:
+- corrigidos alguns problemas de conexão de algumas máquinas
+- corrigido bug no carregamento das settings advindas do painel que não carregava tudo
+- corrigido problema que ao ter settings carregadas no painel na aba **Account** ficava reiniciando o bot sem parar
+- modificado o preset de "Reset Default Settings" em **Manage Profiles** pra maxTimeForCombo ser padrão 99 (desativado)
+::
+
+::en
+- we taught the **AI** to restart the entire PXG and bot in case the bot doesn’t fully load:
+- implemented a system that shuts down your machine if you stay logged off for more than 15 minutes, reasons:
+- implemented retry optimizations, so if the KizuBot API goes offline, the **AI** will attempt again to:
+- fixed some connection issues on certain machines
+- fixed a bug where settings from the panel didn’t load completely
+- fixed an issue where having panel settings loaded in the **Account** tab would trigger constant bot restarts
+- modified the “Reset Default Settings” preset in **Manage Profiles** so maxTimeForCombo defaults to 99 (disabled)
+::
