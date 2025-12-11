@@ -1,0 +1,60 @@
+---
+slug: "pokexgames-kizubot-ai-fishing-aba-engine-interaction-grid-view-1204"
+date: "2025-12-04"
+tags: ["new-feature", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Fishing, aba engine > Interaction, Grid View"
+  summary: "Adicionado na aba Fishing a opção `hookFallbackDelay` pra você configurar um tempo maximo pra puxar a isca caso o bot não detectar as bolhas. Corrigido bug q..."
+en:
+  title: "Fishing, Engine tab > Interaction, Grid View"
+  summary: "Added the `hookFallbackDelay` option to the Fishing tab, allowing you to configure a maximum time to pull the hook if the bot doesn't detect bubbles. Fixed a..."
+---
+
+::pt
+- adicionado na aba **Fishing** a opção `hookFallbackDelay` pra você configurar um tempo maximo pra puxar a isca caso o bot não detectar as bolhas
+- corrigido bug que as vezes a **IA** soltava as skills fora da ordem que voce configurou na aba setup
+- corrigido problema que as mensagens laranja de informacoes do bot nao estavam aparecendo (ex da mensagem de carregada config)
+- varias correções no Sistema de chat, você sabia que todo o chat do jogo pode ser acessado do painel? **aba engine > Interaction** ou **Grid View**
+- corrigido problema eventual em recreates
+- corrigido problema no alarme do whatsapp que as vezes parava de funcionar
+- corrigido nome da waypoint que aparecia incorreto no HUD
+- agora aparece o nome da waypoint acima dos botoes do bot
+- agora aparece o nome do seu pokemon acima dos botoes do bot
+- agora o HUD não é ativado automaticamente ao abrir o jogo (vc abre se quiser clicando F12)
+- adicionado ping abaixo da informação de FPS, para ver basta ir em Options > Graphics > Show FPS
+- otimizações de processamento da **IA** relacionado a caminhada e descobrimento de rota foram feitas no cavebot
+- otimizações de processamento da **IA** relacionado a ver pokemons selvagens e categoriza-los foram feitas no combat
+- corrigidos problemas no Sistema de desligamento automatic das maquinas
+- agora caso houver problemas com a api e o painel, no game após 5 tentativas o painel cancela o auto login e diz "Connection failed. Auto-login disabled."
+- antes quando tinha mais pokemons na tela do que a quantidade de "espaços" livres ao redor do seu pokemon ele começava o combo instantaneamente, agora isso foi corrigido pra começar instataneamente porem respeitando boxRadius e os "espaços preenchidos", com essa otimização pretendemos evitar varios casos de combo precoce
+- changePokeAfterDie entrou em manutenção (no futuro faremos uma implementação melhor pra ele e ja adaptado em Actions)
+- otimizações gerais no Sistema de pesca
+- otimizações de consumo de processamento da **IA** nas detecções de NPC's da Brotherhood
+- na aba **Farming** foi adicionado `minigameSolveDelay` pra você escolher em quanto tempo quer resolver o minigame
+- varias otimizações nos diversos usos e casos do revive
+::
+
+::en
+- Added the `hookFallbackDelay` option to the **Fishing** tab, allowing you to configure a maximum time to pull the hook if the bot doesn't detect bubbles.
+- Fixed a bug where the **AI** would sometimes cast skills out of the order configured in the setup tab.
+- Fixed an issue where orange bot information messages were not appearing (e.g., config loaded message).
+- Various fixes to the Chat System. Did you know the entire game chat can be accessed from the panel? Go to **Engine tab > Interaction** or **Grid View**.
+- Fixed an occasional issue with recreates.
+- Fixed an issue with the WhatsApp alarm that would sometimes stop working.
+- Fixed the waypoint name appearing incorrectly on the HUD.
+- The waypoint name now appears above the bot buttons.
+- Your pokemon's name now appears above the bot buttons.
+- The HUD is no longer automatically activated when opening the game (you can open it if you wish by pressing F12).
+- Added ping display below the FPS information. To see it, go to Options > Graphics > Show FPS.
+- **AI** processing optimizations related to walking and pathfinding were implemented in the cavebot.
+- **AI** processing optimizations related to spotting wild pokemons and categorizing them were implemented in the combat system.
+- Fixed issues in the automatic machine shutdown system.
+- Now, if there are issues with the API and the panel, after 5 attempts in-game, the panel cancels auto-login and displays "Connection failed. Auto-login disabled."
+- Previously, when there were more pokemons on screen than free "spaces" around your pokemon, it would start the combo instantly. This has been corrected to start instantly while respecting `boxRadius` and "filled spaces". With this optimization, we aim to prevent various cases of premature combos.
+- `changePokeAfterDie` has entered maintenance (in the future, we will release a better implementation for it, already adapted into Actions).
+- General optimizations in the Fishing System.
+- Optimizations of **AI** processing consumption regarding Brotherhood NPC detection.
+- Added `minigameSolveDelay` to the **Farming** tab, allowing you to choose how long to take to solve the minigame.
+- Various optimizations in the different uses and cases of revive.
+::
