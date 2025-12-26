@@ -1,0 +1,70 @@
+---
+slug: "pokexgames-kizubot-ai-resolvido-problema-resolvida-incoerencia-1219"
+date: "2025-12-19"
+tags: ["bug-fix"]
+hasEnglish: true
+pt:
+  title: "resolvido problema & resolvida incoerencia"
+  summary: "Agora usa modo duplo VNC + Selkies e está mais estável/seguro;. Painel in-game cancela login depois de 5 tentativas ou credencial errada."
+en:
+  title: "fixed save/config flows for multiple & fixed minigameSolveDelay not saving"
+  summary: "Now supports dual-mode VNC + Selkies with better stability/security. In-game panel cancels login after 5 retries or wrong credentials."
+---
+
+::pt
+- agora usa modo duplo VNC + Selkies e está mais estável/seguro;
+- painel in-game cancela login depois de 5 tentativas ou credencial errada
+- o FPS da VNC subiu um pouco
+- Farming não trava mais após minigames quando lootingEnabled está desligado
+- Waypoints e rotas foram reorganizados para ficarem mais consistentes
+- respostas rápidas editáveis com sincronização por conta
+- textos traduzidos revisados
+- correções de salvamento/config para vários personagens
+- resolvido problema em minigameSolveDelay que não salvava corretamente
+- resolvida incoerencia em resumeCavebotBehavior que não funcionava as vezes no Dashboard
+- resolvido problema em hookFallbackDelay na aba fishing
+- agora ao desabilitar alarmEnabled, toda aba fecha
+- agora ao desabilitar doHealing, toda a aba fecha
+- agora ao desabilitar doCombat, toda a aba fecha
+- agora ao desabilitar doFishing, toda a aba fecha
+- agora ao desabilitar doFarming, toda a aba fecha
+- agora ao desabilitar doCavebot, toda a aba fecha
+- agora ao desabilitar useParty, toda a aba fecha
+- resolvido problema de extensão no download de waypoints
+- chat (gridView & Interaction na aba engine): permitir enviar mensagem com Enter
+- chat (gridView & Interaction na aba engine): quick msgs presets configuráveis por login (salvar para todos chars do login)
+- chat (gridView & Interaction na aba engine): remover duplicadas no canal default do proprio player
+- gridviewer: widget VNC mais redimensionável
+- tela inicial: alerta grande “você nunca logou no pxg com bot, falha ao carregar informações do personagem, faça seu primeiro login”
+- criação/switch de personagem: evitar travar em “creating character” ou não concluir switch; revisar router push e fluxo
+- manage profiles: ao carregar preset, mostrar “carregando, por favor aguarde” (UX amigável)
+::
+
+::en
+- now supports dual-mode VNC + Selkies with better stability/security
+- in-game panel cancels login after 5 retries or wrong credentials
+- VNC FPS is slightly higher
+- farming no longer locks after minigames when lootingEnabled is off
+- waypoints/routes got a cleanup for consistency
+- editable quick replies with account-level sync
+- refreshed translations
+- fixed save/config flows for multiple characters
+- fixed minigameSolveDelay not saving correctly
+- fixed resumeCavebotBehavior inconsistency on the dashboard
+- fixed hookFallbackDelay in the fishing tab
+- disabling alarmEnabled now closes the whole tab
+- disabling doHealing now closes the whole tab
+- disabling doCombat now closes the whole tab
+- disabling doFishing now closes the whole tab
+- disabling doFarming now closes the whole tab
+- disabling doCavebot now closes the whole tab
+- disabling useParty now closes the whole tab
+- fixed waypoint download extension issue
+- chat (gridView & Engine Interaction tab): allow sending messages with Enter
+- chat (gridView & Engine Interaction tab): quick message presets configurable per login (save for all chars in that login)
+- chat (gridView & Engine Interaction tab): remove duplicates in default channel for own player
+- gridviewer: make the VNC widget more resizable
+- home screen: big alert “you have never logged into PXG with the bot, failed to load character info; please do your first login”
+- create/switch character: prevent getting stuck on “creating character” or failing to complete switch; review router push/flow
+- manage profiles: when loading a preset, show “loading, please wait” (user-friendly)
+::
