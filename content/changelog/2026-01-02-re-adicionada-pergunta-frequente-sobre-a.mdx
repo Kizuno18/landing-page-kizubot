@@ -1,0 +1,40 @@
+---
+slug: "pokexgames-kizubot-ai-re-adicionada-pergunta-frequente-sobre-adicionado-siste-0102"
+date: "2026-01-02"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "re-adicionada pergunta frequente sobre & adicionado Sistema que detecta"
+  summary: "Melhorada a escolha de alvo individual (agora prioriza o mais perto do seu pokemon e com menos vida). Agora quando vc tiver matando de 1 em 1 e dropar nothin..."
+en:
+  title: "Re-added the Shiny Ditto FAQ & Added Invisible Creature Detection:"
+  summary: "Improved individual target selection (now prioritizes the target closest to your Pokémon with the lowest health). Optimized looting: when killing monsters on..."
+---
+
+::pt
+- melhorada a escolha de alvo individual (agora prioriza o mais perto do seu pokemon e com menos vida)
+- agora quando vc tiver matando de 1 em 1 e dropar nothing, nao vai tentar coletar o loot (agiliza a rota)
+- re-adicionada pergunta frequente sobre shiny ditto no painel
+- corrigido visao da IA, agora ela respeita corretamente os raios horizontais e verticais (antes pegava o maior numero)
+- corrigido provoke que ainda as vezes nao provocava corretamente
+- adicionado Sistema que detecta criaturas invisiveis (usaram cd tipo invisible) isso ajuda o combat a nao ignorer enquanto invisiveis
+- agora o combat vai ser ignorado em PZ (reduz processamento da IA e Evita bugs)
+- agora o KizuBot modifica automaticamente a config do jogo pra mostrar a vida do Pokémon em porcentagem
+- agora o nome do seu personagem aparece na barra do navegador
+- adicionado pequeno botão pra ver licenças expiradas (licenças antigas vao estar com contagem incorreta)
+- melhoradas 192 traduções do painel
+::
+
+::en
+- Improved individual target selection (now prioritizes the target closest to your Pokémon with the lowest health).
+- Optimized looting: when killing monsters one by one, the bot will no longer attempt to collect loot if "nothing" drops (speeds up the route).
+- Re-added the Shiny Ditto FAQ to the dashboard.
+- Fixed AI vision: it now correctly respects horizontal and vertical ranges (previously it defaulted to the higher value).
+- Fixed Provoke bug where the skill would occasionally fail to trigger correctly.
+- Added Invisible Creature Detection: the system now detects creatures using invisibility spells, ensuring the combat module doesn't ignore them.
+- Combat logic is now automatically disabled in Protection Zones (PZ) to reduce CPU usage and prevent bugs.
+- KizuBot now automatically modifies game settings to display Pokémon health as a percentage.
+- Your character's name is now displayed in the browser tab.
+- Added a small button to view expired licenses (note: legacy licenses may show incorrect duration counts).
+- Improved and refined 192 translations across the dashboard.
+::
