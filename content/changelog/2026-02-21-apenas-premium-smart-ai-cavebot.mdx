@@ -1,0 +1,70 @@
+---
+slug: "pokexgames-kizubot-ai-apenas-premium-smart-ai-cavebot-0221"
+date: "2026-02-21"
+tags: ["new-feature", "improvement", "bug-fix", "security"]
+hasEnglish: true
+pt:
+  title: "apenas premium, smart AI, Cavebot"
+  summary: "Removida função do cavebot `avoidLostMultiplier`. Removida função do cavebot `maxWalkAttempts`."
+en:
+  title: "premium only, smart AI, Cavebot"
+  summary: "Removed cavebot function `avoidLostMultiplier`. Removed cavebot function `maxWalkAttempts`."
+---
+
+::pt
+- removida função do cavebot `avoidLostMultiplier`
+- removida função do cavebot `maxWalkAttempts`
+- removida função do cavebot `nodeRadius`
+- resovido pequeno bug nas opções de actions `walk_to_waypoint` e `set_cavebot_waypoint`
+- melhorado MUITO a opção `cloudFarming` (antigo VIP1) **apenas premium**
+- melhorado a coleta de loot (parece muito mais humana)
+- melhorado sistema **smart AI** de humanização
+- melhorado anti-lost pokémons
+- simplificadas configurações do **Cavebot**
+- na aba **Cavebot** agora foi adicionada a opção `Dash While Luring` pra mais infos ler a descrição
+- na aba **Cavebot** agora está claramente detalhado como é o processo de Lure `Anti-Lost`
+- melhoradas prioridades, agora a **IA** prioriza Loot > Catch > Tall Grass > bush/madeira/minereio > headbutt e por fim > walk normal do cavebot
+- melhoradas estratégias de segurança e anti-detecção do **KizuBot**
+- corrigida função que notifica os **Desenvolvedores** do KizuBot sobre bugs (agora correções acontecerão mais rápido)
+- agora a **IA** é capaz de detectar a Speed do seu char e usar isso de maneira Inteligente
+- agora a **IA** considera o `PING` durante o cavebot, pra calcular compensação
+- melhorada humanização de _"nodes"_ e agora é **automático**
+- resolvido problemas com escadas
+- melhorado recorder pra gravar escadas
+- melhorado cavebot ao lidar com escadas
+- agora ao ficar "stucked" proximo a escadas o bot n ficara parado pra sempre, em menos de 1min ele vai recalcular (baseado em `Tempo de Espera (segundos)` configurável como sub opção do alarme -> `CharacterStucked` e **caso estiver desativado:** o padrão será 20
+- agora ao pisar em cima de **Grama Alta (Tall Grass)** não "recalcula rota" do cavebot
+- agora ao ativar `Auto Switch Hunt` não é 100% literal, exemplo: teste_starm_big_2025 daria certo no _starmie_ mas nao daria no _staryu_
+- agora o novo Sistema de slow lure, se vc estiver INDO em direção às criaturas, não andará tão lento (reconhece o que realmente é Lost)
+- agora o bot vai coletar o loot de uma maneira mais lógica exemplo os waypoints estao seguindo pra esquerda e os corpos estao na direita sempre escolhe coletar da direita e depois esquerda pra que ja esteja "na rota de continuar o cavebot"
+- corrigido problema que o cavebot "parecia querer andar" durante a coleta de recursos do farming
+::
+
+::en
+- Removed cavebot function `avoidLostMultiplier`
+- Removed cavebot function `maxWalkAttempts`
+- Removed cavebot function `nodeRadius`
+- Fixed a small bug in the `walk_to_waypoint` and `set_cavebot_waypoint` action options
+- Greatly improved the `cloudFarming` option (formerly VIP1) **premium only**
+- Improved loot collection (seems much more human-like)
+- Improved **smart AI** humanization system
+- Improved anti-lost Pokémon feature
+- Simplified **Cavebot** settings
+- In the **Cavebot** tab, the `Dash While Luring` option has been added. For more information, check the description
+- In the **Cavebot** tab, the Lure `Anti-Lost` process is now clearly detailed
+- Improved priorities: now the **AI** prioritizes Loot > Catch > Tall Grass > bush/wood/ore > headbutt, and finally > normal cavebot walk
+- Improved safety and anti-detection strategies for **KizuBot**
+- Fixed the function that notifies **KizuBot** Developers about bugs (fixes will now happen faster)
+- The **AI** can now detect your character's speed and use it intelligently
+- The **AI** now considers the `PING` during the cavebot process to calculate compensation
+- Improved humanization of _"nodes"_ and now it is **automatic**
+- Fixed issues with stairs
+- Improved recorder for stairs
+- Improved cavebot when dealing with stairs
+- Now, if stuck near stairs, the bot will not remain stuck forever. In less than 1 minute, it will recalculate (based on `Wait Time (seconds)` configurable as a sub-option in the alarm -> `CharacterStucked`, and **if disabled** the default will be 20)
+- Now, stepping on **Tall Grass** no longer causes the cavebot to "recalculate route"
+- Now, when activating `Auto Switch Hunt`, it’s not 100% literal. For example, test_starm_big_2025 would work for _starmie_ but not for _staryu_
+- The new slow lure system: if you are MOVING towards creatures, it won't walk as slowly (recognizes what is truly Lost)
+- The bot now collects loot in a more logical way. For example, if the waypoints are leading to the left and the corpses are on the right, it will collect from the right side first and then the left, so it is already aligned with the route to continue the cavebot
+- Fixed an issue where the cavebot appeared to “try to move” while collecting farming resources
+::
