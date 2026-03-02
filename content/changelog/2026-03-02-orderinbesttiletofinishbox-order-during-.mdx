@@ -1,0 +1,38 @@
+---
+slug: "pokexgames-kizubot-ai-orderinbesttiletofinishbox-order-during-lure-combat-0302"
+date: "2026-03-02"
+tags: ["new-feature", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "orderInBestTileToFinishBox, Order During Lure, Combat"
+  summary: "Resolvido problema com sessões na aba statistics (duplicação, não criação etc). Agora o alarme de stuck não toca  mais caso apenas esteja parado por motivos ..."
+en:
+  title: "orderInBestTileToFinishBox, Order During Lure, Combat"
+  summary: "Fixed issues with sessions in the Statistics tab (duplication, not being created, etc.). Now the stuck alarm doesn't play in the cases that just not walking ..."
+---
+
+::pt
+- resolvido problema com sessões na aba statistics (duplicação, não criação etc)
+- agora o alarme de stuck não toca  mais caso apenas esteja parado por motivos do cavebot:
+- resolvido eventual problema que humanizationSteps bugava o cavebot
+- resolvido evetual probleema que waitLureOnDespawnWarning bugava o cavebot
+- **orderInBestTileToFinishBox** saiu da manutenção
+- **Order During Lure** saiu da manuteneção
+- adicionada opção `repositionDuringCombo` na aba **Combat** ler descrição no painel
+- resolvidos alguns problemas na aba Statistics do painel (necessário recreate)
+- adicionada **BlackSteel Pickaxe** como prioridade para `Engenheiro` caso o player tiver o item
+- resolvido problema que não considerava MT.Siver como àrea de profissão 60+
+::
+
+::en
+- Fixed issues with sessions in the Statistics tab (duplication, not being created, etc.)
+- now the stuck alarm doesn't play in the cases that just not walking for cavebot config reasons:
+- Fixed an occasional issue where humanizationSteps was causing the cavebot to bug.
+- Fixed an occasional issue where waitLureOnDespawnWarning was causing the cavebot to bug.
+- **orderInBestTileToFinishBox** is no longer under maintenance.
+- **Order During Lure** is no longer under maintenance.
+- Added the `repositionDuringCombo` option in the **Combat** tab (read the description in the panel).
+- Fixed several issues in the Statistics tab of the panel (recreate required).
+- Added **BlackSteel Pickaxe** as a priority for `Engineer` if the player has the item.
+- Fixed an issue where MT.Silver was not being considered as a profession area level 60+.
+::
