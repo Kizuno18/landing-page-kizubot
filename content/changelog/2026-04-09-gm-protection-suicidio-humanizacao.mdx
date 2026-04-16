@@ -1,0 +1,56 @@
+---
+slug: "pokexgames-kizubot-ai-gm-protection-suicidio-humanizacao-0409"
+date: "2026-04-09"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "GM Protection, suicídio, Humanização"
+  summary: "Novo sistema de GM Protection integrado: agora a IA detecta GM na tela, seta do GM e aviso anti-bot de forma separada e configurável no painel. Você escolhe ..."
+en:
+  title: "GM Protection, suicide mode, Humanization"
+  summary: "New GM Protection system: the AI now detects staff on screen, GM arrows, and anti-bot warnings as separate configurable events. Choose which modules to deact..."
+---
+
+::pt
+- novo sistema de **GM Protection** integrado: agora a **IA** detecta GM na tela, seta do GM e aviso anti-bot de forma separada e configurável no painel. Você escolhe o que desativar quando GM aparece (Cavebot, Farming, Fishing) e pode até configurar modo **suicídio** onde desativa heal, cancela ataque e anda pro grupo de monstros mais denso pra morrer "acidentalmente"
+- novo sistema de **Humanização** adicionado ao painel: aba dedicada com 3 tabs (Geral, Comportamento, Pausas). Agora a **IA** varia seus thresholds de vida, poção, monstros a cada ciclo de lure pra parecer mais humano. Micro-pausas e pausas longas configuráveis.
+- a **IA** agora reage ao GM de forma humanizada: delay configurável antes de responder, para de dançar e enviar mensagem após um limite de setas (fadiga), ordem de dançar/falar configurável
+- novo sistema de **Stun Moves**: 5ª categoria de magias no Setup com detecção automática. 10 cenários configuráveis (shiny, mega, boss, nome da criatura, count de criaturas etc.) com 3 modos de prioridade (antes/durante/sob demanda no combo)
+- agora a **IA** pode considerar **stones como raras** mesmo com lootOnlyRare ativado - nova opção em Combat
+- adicionados delays configuráveis para jogar ball: delay antes da primeira ball e delay entre cada ball com 5 velocidades (instantâneo/rápido/padrão/lento/realístico) na aba Catch
+- adicionada opção **realístico** no delay do minigame (13-20s) pra parecer mais humano. Tempos rebalanceados.
+- agora o painel mostra **mega/shiny/boss por pokémon** na tabela de kills em statistics
+- nas **pausas longas da hunt**, agora é possível desligar Healing e Combat separadamente, com descrições e exemplos concretos explicando a diferença entre micro-pausas e pausas longas
+- corrigido alarme de player em outros andares que estava com a comparação de andar invertida
+- corrigido problema onde GM no canal de Report fazia a **IA** achar que tinha GM na tela
+- corrigido bug onde a proteção parcial de GM não reativava os módulos após o GM ir embora
+- melhorias na estabilidade do bot: agora todas requisições ao servidor usam retry inteligente com circuit breaker. Se o servidor cair, o bot não floda mais requisições nem mensagens de chat
+- agora o **panic** desconecta o personagem corretamente (antes podia ficar online após panic)
+- corrigido problema de status online dos personagens no painel
+- correções em traduções quebradas no painel (setup de pokémon, editor de waypoints)
+- seletor de idioma agora fica dentro do menu de configurações do painel
+- 2 novos temas no painel: **Gold Days** e **Spatial Hacker**. Agora você escolhe qual tema quer.
+- busca do painel foi totalmente refeita: correção de resultados que levavam pro lugar errado
+::
+
+::en
+- New **GM Protection** system: the **AI** now detects staff on screen, GM arrows, and anti-bot warnings as separate configurable events. Choose which modules to deactivate and optionally enable **suicide mode** — disables healing, cancels attacks, and walks toward the densest monster group to die "accidentally"
+- New **Humanization** system in the panel: dedicated tab with 3 sections (General, Behavior, Pauses). The **AI** now varies your thresholds each lure cycle to appear more human. Configurable micro-pauses and long hunt breaks.
+- The **AI** now responds to GMs in a humanized way: configurable reaction delay, fatigue after repeated arrows, configurable dance/message order
+- New **Stun Moves** system: 5th spell category in Setup with auto-detection. 10 configurable scenarios with 3 priority modes (before/during/on-demand combo)
+- The **AI** can now treat **stones as rare** even with lootOnlyRare enabled — new option in Combat tab
+- Added configurable throw ball delays: delay before first ball and delay between each ball with 5 speed options in Catch tab
+- Added **realistic** minigame delay option (13-20s) for more human-like behavior. Rebalanced timings.
+- Panel now displays **mega/shiny/boss per pokémon** in the kills table in statistics tab
+- Hunt breaks now support disabling Healing and Combat separately, with descriptions and concrete examples explaining the difference between micro-pauses and hunt breaks
+- Fixed player alarm on other floors that had floor comparison inverted
+- Fixed issue where GM in Report channel made the **AI** think staff was on screen
+- Fixed bug where partial GM protection didn't re-enable modules after GM left
+- Improved bot stability: all server requests now use smart retry with circuit breaker. If the server goes down, the bot no longer floods requests or chat messages
+- **Panic** now properly disconnects the character (could stay online after panic before)
+- Fixed character online status not updating on panel
+- Fixed broken translations in the panel (pokémon setup, waypoint editor)
+- Language selector now inside the panel settings menu
+- 2 new panel themes: **Gold Days** and **Spatial Hacker**. Pick your style.
+- Panel search completely rebuilt: fixed results pointing to wrong locations
+::
