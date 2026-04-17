@@ -1,0 +1,34 @@
+---
+slug: "pokexgames-kizubot-ai-shape-radius-47-presets-network-6x-0411"
+date: "2026-04-11"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Shape Radius com 47 Presets, Cascata por Magia & Rede 6x Mais Rápida"
+  summary: "Novo sistema visual de Shape Radius substitui o boxRadius com 47 presets e cascata por pokémon e magia, corrige bug do monstro no canto, e rede interna 6x mais rápida."
+en:
+  title: "Shape Radius with 47 Presets, Per-Move Cascade & 6x Faster Network"
+  summary: "New visual Shape Radius system replaces boxRadius with 47 presets and per-pokemon/per-move cascade, fixes corner monster bug, and 6x faster internal network."
+---
+
+::pt
+- novo sistema de **Shape Radius** que substitui o antigo `boxRadius`: agora em vez de um número único pro raio da box, você tem um editor visual com **47 presets** em 7 categorias (Quadrados, Diamantes, Cruzes, Octógonos, Anéis, Cones e Linhas) e ainda pode criar o seu próprio formato no grid customizado
+- o Shape Radius tem **cascata de prioridade**: você define um formato padrão, pode sobrescrever por pokémon, e ainda por magia individual. Ou seja, cada magia pode ter sua própria área de efeito
+- os cones e linhas rotacionam automaticamente baseado na direção do pokémon, então a IA sempre sabe pra qual lado a magia vai bater
+- isso corrige o famoso bug do "sobrou 1 monstro no canto" depois do combo — antes o boxRadius era um quadrado e contava os cantos, mas as magias (diamond/cross/cone/line) não alcançavam ali. Agora só conta o que realmente vai ser atingido
+- a opção `ignoreBoxRadiusOnTargetSkills` foi renomeada para `ignoreShapeBoxOnTargetSkills` pra manter consistência com o novo sistema
+- a seção de Shape Radius no painel foi movida pra dentro de **Combo Conditions**, junto com o `minMonsters`, onde o antigo boxRadius ficava
+- corrigido problema que não tocava alarme sonoro no painel quando o WhatsApp/Telegram estavam com número inválido ou ocorria algum erro no envio da mensagem — agora o som local sempre toca independente dos canais remotos
+- correções na rede interna do kizubot, agora vamos operar com 6x mais upload/download
+::
+
+::en
+- New **Shape Radius** system replacing the old `boxRadius`: instead of a single number for the box radius, you now have a visual editor with **47 presets** across 7 categories (Squares, Diamonds, Crosses, Octagons, Rings, Cones and Lines), plus a custom grid editor to draw your own shape
+- Shape Radius has a **priority cascade**: you set a default shape, override per pokemon, and even per individual move. Each spell can have its own area of effect.
+- Cones and lines auto-rotate based on pokemon facing, so the AI always knows which direction the spell will hit
+- Fixes the famous "1 mob left alive at the corner" bug after combo — the old boxRadius was a square and counted corners, but actual spells (diamond/cross/cone/line) couldn't reach them. Now only tiles that will actually be hit are counted
+- The `ignoreBoxRadiusOnTargetSkills` option was renamed to `ignoreShapeBoxOnTargetSkills` for consistency with the new system
+- Shape Radius panel section was moved into **Combo Conditions**, next to `minMonsters`, where the old boxRadius used to live
+- Fixed issue where the local sound alarm wasn't playing when WhatsApp/Telegram were configured with invalid numbers or when message sending failed — now the local sound always plays regardless of remote channel errors
+- Fixes to the internal KizuBot network; we will now operate with 6x higher upload and download speeds
+::
