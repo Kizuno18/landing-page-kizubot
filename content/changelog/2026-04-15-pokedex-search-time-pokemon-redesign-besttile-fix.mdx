@@ -1,0 +1,30 @@
+---
+slug: "pokexgames-kizubot-ia-pokedex-search-time-pokemon-redesign-besttile-0415"
+date: "2026-04-15"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Busca na Pokédex Exclusiva, Redesign do Time Pokémon & Fix do bestTile"
+  summary: "Novo campo de busca com a pokédex exclusiva do kizubot e pré-configurações de magias por pokémon, redesign completo da aba Time Pokémon, correção do bestTile no orderDuringLure/orderInBestTileToFinishBox, e o recreate do painel agora é o caminho oficial pra atualizar o bot (ALT+F não atualiza mais)."
+en:
+  title: "Exclusive Pokédex Search, Time Pokémon Redesign & bestTile Fix"
+  summary: "New search field backed by the kizubot-exclusive pokédex with per-pokemon move presets, full redesign of the Time Pokémon tab, bestTile fix for orderDuringLure/orderInBestTileToFinishBox, and recreate from the panel is now the official way to update the bot (ALT+F no longer updates)."
+---
+
+::pt
+- **importante:** agora as atualizações do kizubot chegam via **recreate** feito pelo painel em [painel.kizubot.com/dashboard/machine-setup](https://painel.kizubot.com/dashboard/machine-setup). O `ALT+F` em zona segura não baixa mais versão nova — por isso removemos essa dica do changelog
+- adicionado **campo de busca** na aba Time Pokémon integrado com a **pokédex exclusiva do kizubot** — você digita o nome do pokémon e já puxa as **pré-configurações de magias** testadas pela gente, sem precisar montar setup manualmente
+- redesenhamos por inteiro o **DESIGN da aba Time Pokémon** — layout mais claro, menos cliques pra configurar cada pokémon, e visual alinhado com o resto do painel
+- corrigido bug na escolha do *bestTile* usado pelo `orderDuringLure` e pelo `orderInBestTileToFinishBox` — em certos cenários o bot escolhia um tile pior do que o ideal durante lure/combo, agora a heurística tá consistente nos dois caminhos
+- corrigido problema raro onde a máquina ficava bugada depois do recreate — acontecia em casos específicos de timing e deixava o container em estado inconsistente até o próximo reinício
+- removida a opção de `color_depth` da aba de recreate — era uma config interna que não trazia benefício pro usuário e só atrapalhava na hora de recriar
+::
+
+::en
+- **important:** kizubot updates now arrive via **recreate** from the panel at [painel.kizubot.com/dashboard/machine-setup](https://painel.kizubot.com/dashboard/machine-setup). `ALT+F` in a safe zone no longer pulls a new version — that's why we removed the note from the changelog header
+- Added a **search field** in the Time Pokémon tab backed by the **kizubot-exclusive pokédex** — type the pokemon's name and it pulls in our **tested move presets**, no more building the setup from scratch
+- Fully **redesigned the Time Pokémon tab** — cleaner layout, fewer clicks to configure each pokemon, and visuals aligned with the rest of the panel
+- Fixed a bug in *bestTile* selection used by `orderDuringLure` and `orderInBestTileToFinishBox` — in certain scenarios the bot picked a worse tile than ideal during lure/combo, now the heuristic is consistent across both paths
+- Fixed a rare issue where the machine would end up buggy after a recreate — happened in specific timing cases and left the container in an inconsistent state until the next restart
+- Removed the `color_depth` option from the recreate tab — it was an internal setting that brought no user benefit and just got in the way during recreate
+::
