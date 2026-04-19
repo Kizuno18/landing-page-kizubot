@@ -1,0 +1,46 @@
+---
+slug: "pokexgames-kizubot-ia-positioning-rules-wait-close-target-stragglers-0412"
+date: "2026-04-12"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Posicionamento Unificado, Regras Situacionais, Wait Close Target & Alvo de Stragglers"
+  summary: "Nova seção unificada de Posicionamento e Distância no combate, sistema de regras situacionais com 11 condições, nova feature Wait Close Target, alvo automático de stragglers no 2º combo, botões de mudo/fechar alarmes, fix de micro pausas e várias melhorias de UX."
+en:
+  title: "Unified Positioning, Situational Rules, Wait Close Target & Straggler Targeting"
+  summary: "New unified Positioning & Distance section in combat tab, situational rules engine with 11 condition types, new Wait Close Target feature, automatic straggler targeting on second combo, mute/dismiss alarm buttons, micro pauses fix, and several UX improvements."
+---
+
+::pt
+- nova seção unificada **Posicionamento e Distância** na aba de combate que junta num lugar só as 3 áreas antes espalhadas: distância do personagem, distância do pokémon e distância contra shinies/megas/bosses
+- novo sistema de **Regras Situacionais** de distância: agora você pode criar regras condicionais tipo "recua pra 4 tiles quando meu HP cair abaixo de 50%" ou "usa distância 6 quando tem shiny na tela". Tem **11 tipos de condições** (HP do player, HP do pokemon, quantidade de monstros na tela, monstros na box, shiny/mega/boss na tela, criaturas específicas, pokemon ativo, fase de lure, fase de combo). É 100% opcional — se não ativar, nada muda
+- nova feature **Wait Close Target** ("tickzinho"): segura o cast de uma magia até a criatura mais próxima ficar dentro do raio que você configurar, com timeout de segurança pra rotação nunca travar. Perfeito pra magias melee, burst de AoE tipo `blast burn`, e lures de canto onde você quer que o pack inteiro se agrupe antes de detonar
+- nova opção **alvo de stragglers no 2º combo**: depois do bot usar um revive forçado no combo, ele passa a mirar monstros de baixa vida que ficaram FORA da box — evita que eles sigam você pro próximo lure e morram no pull errado
+- adicionado botão pra **fechar todas notificações** de uma vez no painel
+- adicionado botão pra **mutar o som de alarmes** do painel
+- agora o **streamerMode** muda o nick na aba de waypoints também
+- agora o **trocar de hunt automático** ignora waypoints que tenham seu nick ou o nick do seu pokémon
+- corrigido bug onde **micro pausas** e **pausas na hunt** bugavam o bot inteiro
+- `Configuração` virou **Time Pokémon** pra ficar mais claro oq faz
+- `Actions` virou **Actions e Scripts** pra ficar mais claro oq faz
+- corrigido bug onde o pokémon ficava colado no personagem por meio segundo depois do revive (os dois apanhando no mesmo tile) — agora ele se reposiciona na hora, eliminando a janela de vulnerabilidade
+- correções de lentidão ao enviar alarmes e erros ocasionais ao salvar waypoints causados por saturação da fila interna dos datacenters
+- corrigido pequeno problema de inteligibilidade ao setar uma senha numa máquina pela primeira vez
+::
+
+::en
+- New unified **Positioning & Distance** section in the Combat tab that brings together 3 previously scattered areas: player distance, pokemon distance, and distance vs shinies/megas/bosses
+- New **Situational Rules** system for distance: you can now create conditional rules like "fall back to 4 tiles when my HP drops below 50%" or "use distance 6 when there's a shiny on screen". It has **11 condition types** (player HP, pokemon HP, monster count on screen, monsters in box, shiny/mega/boss on screen, specific creatures, active pokemon, lure phase, combo phase). 100% optional — if you don't enable it, nothing changes
+- New **Wait Close Target** feature ("tickzinho"): holds a move cast until the nearest creature is within the configured radius, with a safety timeout so the rotation never deadlocks. Perfect for melee moves, burst AoE like `blast burn`, and corner lures where you want the whole pack to cluster before detonating
+- New **target stragglers on second combo** option: after the bot forces a revive during combo, it prioritizes killing low-HP monsters OUTSIDE the box — prevents them from following you to the next lure and dying on the wrong pull
+- Added button to **dismiss all notifications** at once from the panel
+- Added button to **mute alarm sounds** from the panel
+- **streamerMode** now masks the character nickname in the Waypoints tab too
+- **Auto hunt switch** now ignores waypoints named after your character or your pokemon
+- Fixed bug where **micro pauses** and **hunt breaks** were breaking the entire bot
+- `Configuração` renamed to **Time Pokémon** for clarity
+- `Actions` renamed to **Actions & Scripts** for clarity
+- Fixed bug where the pokemon stayed stacked on the player for half a second after revive (both taking damage on the same tile) — now it repositions immediately, eliminating the vulnerability window
+- Fixes for slow alarm delivery and occasional waypoint save errors caused by internal datacenter queue saturation
+- Fixed small readability issue when setting a password on a machine for the first time
+::
