@@ -1,0 +1,44 @@
+---
+slug: "pokexgames-kizubot-ia-machine-setup-revive-after-stun-stun-conditions-0414"
+date: "2026-04-14"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Recriação via Painel, Revive After Stun, Mais Condições de Stun & Fixes Diversos"
+  summary: "Os comandos !view e !recreate via WhatsApp foram desativados — recriação agora é via painel em /dashboard/machine-setup. Além disso, nova opção reviveAfterStun, mais condições pro sistema de stun, botão 'leia mais' nas notificações, e uma série de correções em humanização, GM, minigames e waypoints."
+en:
+  title: "Machine Setup via Panel, Revive After Stun, More Stun Conditions & Various Fixes"
+  summary: "The !view and !recreate WhatsApp commands are deprecated — machine recreation now happens via the panel at /dashboard/machine-setup. Plus new reviveAfterStun option, more condition types for the stun system, 'read more' button on notifications, and a batch of fixes for humanization, GM handling, minigames and waypoints."
+---
+
+::pt
+- **importante:** os comandos `!view` e `!recreate` via WhatsApp foram desativados. A recriação e visualização das máquinas agora é feita direto pelo painel em [painel.kizubot.com/dashboard/machine-setup](https://painel.kizubot.com/dashboard/machine-setup) — interface mais rápida, com feedback visual em tempo real e sem depender do bot de WhatsApp estar online
+- adicionada opção de **reviveAfterStun** no sistema de cura — o bot pode agora usar revive automaticamente quando o pokémon for stunado, garantindo que você volte pro combate com os cooldowns zerados
+- agora é possível **adicionar mais condições pro sistema de stun**: o painel ganhou novos tipos de cenário pra quando as magias de stun devem ser castadas, aumentando bastante a flexibilidade da automação tática
+- agora as notificações do painel têm um botão **"leia mais"** pra alarmes com muita info, evitando que mensagens grandes fiquem amontoadas no canto da tela
+- agora ao salvar uma config aparece uma mensagem mais **intuitiva** dizendo que salvou — antes ficava vago, agora você sabe na hora que deu certo
+- corrigidas mensagens do painel que não davam feedback de sucesso nem de falha — várias pequenas notificações que antes ficavam mudas agora respondem corretamente
+- corrigidos bugs no sistema de lidar com GM's — a reação, dança e respostas automáticas tão mais estáveis
+- resolvidos pequenos bugs no sistema de **humanização**
+- corrigidas **micro pausas** (reforço do fix anterior — tá bem estável agora)
+- corrigido pequeno problema no `disablePokeStopOnTargetSkills`
+- corrigido problema onde às vezes o bot parava o **minigame** pra fazer outras atividades como catch ou farming — agora ele prioriza terminar o minigame antes de mudar de tarefa
+- corrigido pequeno problema que acontecia ao salvar waypoints
+- corrigido o **vídeo tutorial de conexão do alarme** que não estava aparecendo no painel — agora carrega normalmente na tela de alarmes
+::
+
+::en
+- **important:** the `!view` and `!recreate` WhatsApp commands have been disabled. Machine recreation and listing are now done directly through the panel at [painel.kizubot.com/dashboard/machine-setup](https://painel.kizubot.com/dashboard/machine-setup) — faster interface, real-time visual feedback, and no dependency on the WhatsApp bot being online
+- Added **reviveAfterStun** option in the healing system — the bot can now auto-revive when the pokemon gets stunned, bringing it back to combat with cooldowns reset
+- You can now **add more conditions to the stun system**: the panel gained new scenario types to control when stun moves should be cast, significantly expanding tactical automation flexibility
+- Panel notifications now have a **"read more"** button for alarms with lots of info, preventing big messages from piling up in the corner of the screen
+- Saving a config now shows a more **intuitive** "saved" message — previously it was vague, now you know immediately it went through
+- Fixed panel messages that weren't giving success or failure feedback — several small notifications that used to go silent now respond properly
+- Fixed bugs in the GM-handling system — reactions, dancing and auto-replies are more stable
+- Resolved small bugs in the **humanization** system
+- Fixed **micro pauses** (reinforces the previous fix — it's rock solid now)
+- Fixed small issue with `disablePokeStopOnTargetSkills`
+- Fixed issue where the bot would sometimes stop the **minigame** to do other tasks like catch or farming — it now prioritizes finishing the minigame before switching task
+- Fixed small issue that occurred when saving waypoints
+- Fixed the **alarm connection tutorial video** that wasn't showing up in the panel — it now loads properly on the alarms screen
+::
