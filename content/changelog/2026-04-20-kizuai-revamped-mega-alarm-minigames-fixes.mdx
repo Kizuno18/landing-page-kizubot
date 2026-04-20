@@ -1,0 +1,36 @@
+---
+slug: "pokexgames-kizubot-kizuai-renovado-mega-alarm-minigames-0420"
+date: "2026-04-20"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "KizuAI Renovado, Fix do Alarm de Megas & Minigames Robustos"
+  summary: "KizuAI agora lembra o contexto da conversa e cita fontes, alarm de megas que estava falhando silenciosamente pra visuais fora da lista foi corrigido, minigames em janela (pokemon-cards, fishing, cook, music, mastermind, antibot-bar) não abortam mais por movimento/troca de outfit/mountary, ligar/desligar módulos pela aba de Actions volta a funcionar pra todos os módulos, recreate com teto de 10 minutos e aviso centralizado quando demora, e fix de crash no Time Pokémon pra alguns pokémons com dados antigos."
+en:
+  title: "Revamped KizuAI, Mega Alarm Fix & Robust Minigames"
+  summary: "KizuAI now remembers conversation context and cites sources, the mega alarm that was silently failing for looks outside the known list is fixed, window-based minigames (pokemon-cards, fishing, cook, music, mastermind, antibot-bar) no longer abort on movement/outfit change/mountary, toggling modules from the Actions tab works for all modules again, recreate has a 10min ceiling with a centered notice while it runs, plus a crash fix in Time Pokémon for a few pokemons with legacy data."
+---
+
+::pt
+- **KizuAI renovado** — atualizamos o motor por trás do KizuAI. Ele agora **lembra o contexto da conversa** entre mensagens (por personagem), mostra as **fontes** que usou pra responder, e não precisa mais reenviar suas configs do bot a cada follow-up
+- corrigido bug crítico no **alarm de megas** — certos megas com visual fora da nossa lista conhecida **passavam sem alarmar** (o contador de kills subia mas o alarme ficava mudo). Agora o bot aprende sozinho o visual dos megas olhando o corpse no chão, então depois de ver um mega uma vez, o próximo da mesma aparência já alarma normalmente
+- corrigido problema grave em **minigames de janela** (pokemon-cards, fishing, cook, music, mastermind, antibot-bar) — o bot estava **cancelando a própria resposta** quando você se movia, trocava de outfit, ou o mountary ligava/desligava durante o solve. Só o headbutt precisa do player parado, os outros rodam só na tela — agora o bot respeita essa diferença e não sabota mais a própria resposta
+- **fix no módulo de Actions** — o bloco que liga/desliga módulos (cavebot, farming, combat, etc) só funcionava pra Healing por um bug interno. Agora funciona pra todos, incluindo o master toggle do bot. Regras antigas que pareciam "não funcionar" voltam a funcionar sozinhas, sem precisar editar nada
+- **recreate mais previsível** — padronizamos o tempo máximo de recreate pra 10 minutos em toda a cadeia. Se passar de 2min, aparece um **aviso centralizado** explicando que a atualização tá rodando em segundo plano — o painel continua utilizável enquanto isso
+- corrigido crash no **Time Pokémon** em alguns pokémons (blastoise, crobat, abra e outros) que tinham dados de spell em formato antigo — a aba não abria direito pra esses casos. Agora tratamos os dados legados antes de mostrar
+- adicionado **scroll suave** ao adicionar ou importar um pokémon no setup — o card novo já vem pra vista em vez de você ter que rolar a página manualmente
+- melhorada a detecção automática do aviso de **"Repair successful"** dentro do jogo — reconhecemos o aviso de forma mais confiável e agora só reiniciamos o processo do jogo em vez de reiniciar tudo, então **sua sessão VNC não cai mais** durante o repair automático
+- pequeno polish de responsividade na aba **Configurar Máquina** pra celulares e tablets pequenos (botões do card de licença quebram certo agora) e troca do termo "container" por "máquina" nas mensagens de erro e avisos
+::
+
+::en
+- **Revamped KizuAI** — we upgraded the engine behind KizuAI. It now **remembers conversation context** between messages (per character), shows the **sources** it used to answer, and no longer needs to re-send your bot configs on every follow-up
+- Fixed a critical bug in the **mega alarm** — certain megas with a look outside our known list were **silently not firing the alarm** (the kill counter went up but the alarm stayed quiet). Now the bot learns the mega's look on its own by inspecting the corpse on the ground — after seeing a mega once, the next one with the same look alarms correctly
+- Fixed a serious issue in **window-based minigames** (pokemon-cards, fishing, cook, music, mastermind, antibot-bar) — the bot was **cancelling its own answer** when you moved, switched outfit, or mountary toggled during the solve. Only headbutt needs the player standing still, the others run purely on screen — the bot now respects that difference and no longer sabotages its own answer
+- **Actions module fix** — the block that toggles modules on/off (cavebot, farming, combat, etc) only worked for Healing due to an internal bug. It now works for all of them, including the bot's master toggle. Old rules that looked "broken" start working again automatically, no editing required
+- **More predictable recreate** — standardized the recreate ceiling to 10 minutes across the whole chain. If it goes past 2min, a **centered notice** appears explaining that the update is running in the background — the panel stays usable in the meantime
+- Fixed a crash in **Time Pokémon** on a few pokemons (blastoise, crobat, abra, and others) that had spell data in a legacy format — the tab wasn't opening correctly for those cases. We now handle the legacy data before showing it
+- Added **smooth-scroll** when adding or importing a pokemon in setup — the new card is brought into view instead of you having to scroll the page manually
+- Improved the in-game **"Repair successful"** notice detection — we recognize it more reliably and we now only restart the game process instead of restarting everything, so **your VNC session no longer drops** during automatic repair
+- Small responsive polish on the **Machine Setup** tab for phones and small tablets (license card buttons wrap properly now) and renamed "container" to "machine" across error messages and notices
+::
