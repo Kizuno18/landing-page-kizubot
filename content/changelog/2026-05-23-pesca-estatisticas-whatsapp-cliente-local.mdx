@@ -1,0 +1,74 @@
+---
+slug: "pokexgames-kizubot-pesca-estatisticas-whatsapp-cliente-local-0523"
+date: "2026-05-23"
+tags: ["new-feature", "improvement", "bug-fix", "security"]
+hasEnglish: true
+pt:
+  title: "Pesca Melhorada, Estatísticas Mais Precisas & WhatsApp Mais Estável"
+  summary: "Melhoramos bastante a pesca e os minigames, corrigimos estatísticas erradas de kills/XP, adicionamos despesas manuais nas hunts, deixamos o WhatsApp mais confiável, reduzimos alarmes duplicados e melhoramos a estabilidade da máquina depois de recriar."
+en:
+  title: "Improved Fishing, More Accurate Statistics & More Stable WhatsApp"
+  summary: "We improved fishing and minigames, fixed wrong kill/XP statistics, added manual hunt expenses, made WhatsApp more reliable, reduced duplicate alarms and improved machine stability after recreate."
+---
+
+::pt
+- **pesca muito mais confiável** — corrigimos casos onde o bot podia se atrapalhar durante minigames como pesca, cards, cook, music, mastermind e antibot-bar. Agora ele respeita melhor o momento do minigame e evita cancelar a própria ação
+- **nova configuração de modo de pesca** — a aba Fishing ficou mais simples: agora você escolhe um modo direto, como padrão, visão direta, água limpa, céu aberto, mesmo andar ou agressivo, sem precisar combinar vários botões separados
+- **delay da pesca mais humanizado** — o tempo pra puxar a vara depois da fisgada agora fica junto das opções de Humanização, com presets mais naturais
+- **catch com timeout maior** — aumentamos o limite do tempo de espera do catch de 40s pra 120s
+- **estatísticas mais precisas** — corrigimos um problema onde mensagens de Lucky Bonus podiam fazer o bot contar kills a mais do que o real
+- **XP depois da morte corrigido** — quando o personagem morre, o bot agora encerra a "sessão de hunt" da aba statistics atual e começa uma nova corretamente, evitando XP negativo e lucro bugado
+- **despesas manuais nas hunts** — agora dá pra adicionar custos que o bot não consegue detectar sozinho, como Diamond, Boss Charm, boost, taxa de gym, storage ou trade. Esses valores entram no cálculo final do lucro
+- **lista de hunts mais leve** — a aba Statistics agora carrega melhor quando você tem muitas sessões salvas, com paginação e navegação mais organizada
+- **settings.otml otimizado no painel** — adicionamos uma opção rápida pra carregar uma config visual otimizada do cliente, sem precisar enviar arquivo manualmente
+- **máquina mais estável após recreate** — melhoramos a forma como a máquina mantém sua identidade e configurações internas depois de recriar, reduzindo comportamento estranho entre uma recriação e outra
+- **recreate menos sujeito a erro** — melhoramos pontos internos que podiam causar falha por falta de espaço no host ou perda de conexão da máquina depois de recriar
+- **+4 dias de licença para usuários ativos** — adicionamos 3 dias de compensação pelo problema no SSD do servidor `br-south-1` e +1 dia extra pela manutenção anterior, totalizando 4 dias bônus pra todos com licença ativa
+- **Machine Setup mais claro** — o painel agora mostra melhor a identidade atual da máquina em vez de aparecer como "N/A"
+- **menos alarmes duplicados** — corrigimos casos onde o mesmo alarme podia chegar várias vezes no WhatsApp ou Telegram
+- **chat com menos mensagens repetidas** — mensagens repetidas enviadas em sequência agora são filtradas melhor, removidas duplicatas
+- **WhatsApp mais estável** — melhoramos a reconexão automática quando a sessão cai, evitando ficar offline por muito tempo sem tentar voltar
+- **Actions sem loop de mensagem** — regras baseadas em mensagem não devem mais responder a si mesmas e ficar repetindo ação/chat
+- **Actions mais leve** — o bot filtra melhor regras ativas, reduzindo trabalho repetido
+- **configs antigas/quebradas mais tolerantes** — valores salvos em formato inesperado não devem mais quebrar o carregamento da config
+- **licenças e pagamentos custom corrigidos** — licença expirada não reativa, e pagamento custom pendente fica salvo melhor
+- **KizuAI e VNC mais estáveis por trás** — fizemos melhorias internas pra deixar o chat com IA e o acesso remoto mais confiáveis
+- **mais segurança no painel** — reforçamos validações em rotas importantes, licenças, pagamentos e autenticação
+- **melhor compatibilidade no Cliente Local** — fizemos avanços no suporte ao cliente local e corrigimos problemas visuais no login (talvez daqui alguns anos teremos kizubot no seu PC windows)
+- **site atualizado** — adicionamos novos depoimentos, corrigimos imagens quebradas e atualizamos a documentação da pesca pro novo modo
+- **download do Kizu Screen Setup 2.0** — adicionamos o novo arquivo/download no site
+- **base do bot atualizada** — atualizamos arquivos e referências internas do cliente PXG pra continuar acompanhando mudanças recentes do jogo
+- **acessibilidade leve no painel** — botões de ação ganharam labels melhores
+- **importante:** a aba de Stun no Combat entrou em manutenção temporária enquanto reorganizamos essa configuração
+::
+
+::en
+- **much more reliable fishing** — fixed cases where the bot could get confused during minigames like fishing, cards, cook, music, mastermind and antibot-bar. It now respects the minigame moment better and avoids cancelling its own action
+- **new fishing mode setting** — the Fishing tab is simpler now: you pick one direct mode, like default, direct sight, clean water, open sky, same floor or aggressive, without needing to combine several separate buttons
+- **more humanized fishing delay** — the time to pull the rod after the bite now lives together with Humanization options, with more natural presets
+- **longer catch timeout** — increased the catch wait limit from 40s to 120s
+- **more accurate statistics** — fixed an issue where Lucky Bonus messages could make the bot count more kills than actually happened
+- **XP after death fixed** — when the character dies, the bot now ends the current "hunt session" in the Statistics tab and starts a new one correctly, avoiding negative XP and broken profit numbers
+- **manual hunt expenses** — you can now add costs the bot cannot detect by itself, like Diamond, Boss Charm, boost, gym fee, storage or trade. These values are included in the final profit calculation
+- **lighter hunt list** — the Statistics tab now loads better when you have many saved sessions, with pagination and cleaner navigation
+- **optimized settings.otml in the panel** — added a quick option to load an optimized visual client config, without needing to upload a file manually
+- **more stable machine after recreate** — improved how the machine keeps its identity and internal settings after recreate, reducing weird behavior between recreates
+- **recreate less likely to fail** — improved internal points that could cause failures from full host disk or lost machine connection after recreate
+- **+4 license days for active users** — we added 3 compensation days for the `br-south-1` server SSD issue plus 1 extra day from the previous maintenance promise, totaling 4 bonus days for everyone with an active license
+- **clearer Machine Setup** — the panel now shows the current live machine identity better instead of showing "N/A"
+- **fewer duplicate alarms** — fixed cases where the same alarm could arrive multiple times on WhatsApp or Telegram
+- **chat with fewer repeated messages** — repeated messages sent in sequence are filtered better, removing duplicates
+- **more stable WhatsApp** — improved automatic reconnection when a session drops, preventing it from staying offline too long without trying to come back
+- **Actions without message loops** — message-based rules should no longer reply to themselves and keep repeating action/chat
+- **lighter Actions** — the bot filters active rules better, reducing repeated work
+- **more tolerant old/broken configs** — saved values in unexpected formats should no longer break config loading
+- **licenses and custom payments fixed** — expired licenses no longer reactivate, and pending custom payments are saved more reliably
+- **KizuAI and VNC more stable behind the scenes** — internal improvements make the AI chat and remote access more reliable
+- **more panel security** — strengthened validation in important routes, licenses, payments and authentication
+- **better Local Client compatibility** — advanced support for the local client and fixed visual issues in login (maybe a few years from now we'll have kizubot on your Windows PC)
+- **site updated** — added new testimonials, fixed broken images and updated the fishing docs for the new mode
+- **Kizu Screen Setup 2.0 download** — added the new file/download to the site
+- **bot base updated** — updated internal PXG client files and references to keep following recent game changes
+- **small panel accessibility improvement** — action buttons got better labels
+- **important:** the Stun tab in Combat is under temporary maintenance while we reorganize this configuration
+::
