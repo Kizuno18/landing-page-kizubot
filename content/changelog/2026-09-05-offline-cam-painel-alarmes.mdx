@@ -1,0 +1,266 @@
+---
+slug: "pokexgames-kizubot-ia-offline-cam-painel-alarmes-0905"
+date: "2026-09-05"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Gravações Offline, Novo Painel e Alarmes Renovados"
+  summary: "Gravações offline, painel renovado e alarmes mais confiáveis, com muitas melhorias em combate, catch, pesca, farming, cura, VNC e acesso às máquinas."
+en:
+  title: "Offline Recordings, a New Dashboard, and Revamped Alarms"
+  summary: "Offline recordings, a revamped dashboard, and more reliable alarms, with many improvements to combat, catching, fishing, farming, healing, VNC, and machine access."
+---
+
+::pt
+- adicionamos as gravações offline das caçadas: agora vc pode abrir a lista pelo Alt+G, baixar sessões disponíveis e assistir direto no cliente do jogo pra entender o que aconteceu enquanto não estava olhando
+- o player das gravações ganhou velocidades de 1x, 2x, 4x e 8x, escolhidas antes de começar a reprodução, além de mensagens no idioma do cliente e aviso quando precisa sair do jogo pra assistir
+- as gravações agora mostram o fps e o ping da sessão e indicam trechos que não puderam ser registrados, ajudando a localizar travadas e problemas de conexão
+- melhoramos o envio e a recuperação das gravações, incluindo o final da sessão; quando uma máquina desliga no meio, a parte que ainda pode ser assistida aparece como gravação parcial
+- corrigimos várias janelas que abriam durante o replay e ficavam tampando tudo, incluindo presente, correio, market, morte e missões; a reprodução tb passou a mostrar a carta escolhida no minigame
+- parar uma gravação agora encerra a reprodução e reabre a lista, sem deixar o cliente preso na última imagem
+- adicionamos uma opção pra desenhar a rota ativa dentro do jogo, desligada por padrão e que se esconde automaticamente quando aparece alguém de fora da sua party
+- adicionamos a tecla Home pra ligar ou desligar o kizubot, mantendo o botão dentro do jogo sincronizado
+- agora vc pode escolher pelo nome qual pokémon do seu time deve ser chamado depois do login, sem precisar decorar a posição dele
+
+- reformulamos as 12 telas de configuração do painel com explicações mais claras, navegação por objetivo e um caminho guiado pra quem está começando
+- o painel ganhou os estilos guiado e slim, além dos modos padrão e compacto, um tema terminal e uma apresentação inicial pra escolher idioma, tema e visual
+- revisamos o painel no celular com navegação mais simples, botões maiores, formulários e janelas mais fáceis de usar e estatísticas adaptadas pra tela pequena
+- corrigimos o contraste dos temas pra deixar textos, botões, ícones, waypoints e regras mais fáceis de enxergar
+- o menu do celular agora reúne as mesmas opções do computador, incluindo tema, idioma, layout, modo streamer, troca de senha e sair da conta
+- adicionamos estatísticas da comunidade, desligadas por padrão, pra comparar suas configurações com os valores mais usados, a mediana e a faixa comum entre jogadores ativos
+- ficou mais fácil configurar tempos nas actions: agora dá pra escolher milissegundos, segundos, minutos ou horas nos intervalos, esperas e pausas
+- corrigimos a importação de perfis que ignorava as configurações de engine e humanização
+- corrigimos o erro ao salvar perfis compartilhados entre personagens da mesma conta quando o perfil tinha sido criado em outro char
+- corrigimos a tela de time pokémon que podia carregar os dados salvos por cima das alterações que vc ainda estava fazendo
+- simplificamos a criação de personagem com uma pergunta direta, campo maior, verificação do nick e botão sempre visível
+- corrigimos problemas no login do painel com idioma salvo e no cadastro de nicks com espaços no começo ou no fim
+- organizamos o envio de waypoints em um único botão ao lado da busca, com indicação de carregamento e sem salvar a configuração inteira por acidente
+
+- melhoramos a escolha do melhor tile pra fechar a box, considerando o formato dos golpes, as criaturas se aproximando e o momento do lure ou combo
+- adicionamos a opção de virar o pokémon na direção do alvo quando começa a atacar ou troca de target
+- corrigimos o travamento na frente do gimmighoul: o kizubot espera a box sem abandonar o lure, evita puxar o pokémon pra longe e faz uma segunda busca no corpo pra não deixar as moedas pra trás
+- corrigimos casos em que a ball era jogada cedo demais enquanto o corpo ainda tinha loot; agora o catch espera mais, a coleta é repetida e, se o jogo ainda recusar a captura, o corpo volta pra fila de loot
+- corrigimos tentativas de catch em criaturas que o jogo não permite capturar, evitando prender a caçada numa tentativa impossível
+- a lista de espécies ignoradas no catch não bloqueia mais a captura de shiny daquela espécie nem apaga sua contagem de shiny, mega e boss
+- corrigimos outro problema no catch all que podia esquecer capturas do dia ao recarregar as configs e tentar pegar a mesma espécie novamente antes do próximo server save
+- corrigimos a contagem de loot raro que somava o aviso do drop e a coleta como se fossem dois itens diferentes
+- melhoramos a leitura das mensagens de kills e loot em português, espanhol e polonês, incluindo nomes com números como porygon2
+- as estatísticas da sessão passaram a mostrar separadamente quantas megas, shinies e bosses foram derrotados de cada espécie
+
+- corrigimos conflitos entre pesca, loot e catch que faziam o personagem sair da água e perder a isca ou deixavam a captura bloqueada durante toda a pescaria
+- corrigimos um loop em que começar a pescar novamente cancelava o caminho até o loot e deixava corpos parados por vários minutos
+- corpos que não podem mais ser alcançados deixam de prender a fila de captura e impedir o restante da caçada
+- a potion após combo agora espera o fim do combo de verdade, em vez de disparar só porque a área da box ficou vazia por um instante durante o lure
+- o cavebot não volta vários waypoints por engano quando o personagem está parado de propósito em combo, lure, loot, catch ou regeneração
+- agora vc pode escolher como retomar a rota depois de coletar um recurso: continuar de onde parou, seguir pro waypoint mais próximo à frente ou voltar um waypoint
+- corrigimos o conflito entre o caminho do lure e o caminho até os matos que fazia o personagem ficar andando de um lado pro outro
+- fizemos várias correções no farming com fly, incluindo mudança de andar, passagem por áreas sem piso, pouso antes da coleta, recurso escolhido e retorno pra montaria
+- quem usa veículo no farming agora pode escolher se o pokémon sai quando aparece uma criatura alvo ou só quando o personagem toma dano
+- corrigimos a busca de caminho quando a chance de andar em diagonal estava baixa, evitando processamento excessivo e falhas em caminhos simples
+- adicionamos nas actions a opção de guardar o pokémon na ball fora do combate, esperando o combo ou lure terminar e evitando que a cura chame ele de volta logo em seguida
+
+- corrigimos o problema de chamar e guardar o pokémon várias vezes com ping alto; agora o kizubot espera a resposta do jogo antes de repetir
+- potion, comida e cura voltam a ser verificadas mesmo quando a vida fica parada, e o critical revive não fica disparando repetidamente só porque a vida continua abaixo do limite
+- quando o pokémon não volta depois de um revive, o kizubot tenta chamar novamente de forma controlada e para quando o jogo confirma
+- o smart medicine voltou a reconhecer condições ruins e passou a verificar se elas pertencem ao seu próprio pokémon, evitando gastar medicine sem necessidade
+- corrigimos um problema no cálculo de tempo que deixava caminhada, combo, stun e revive muito mais lentos dependendo da carga da máquina
+- reduzimos processamento repetido nas funções de manter distância e controlar o pokémon parado, melhorando casos de queda de fps ao ligar o bot
+- corrigimos regras automáticas de berry que insistiam várias vezes por segundo enquanto o jogo ainda não permitia substituir o item
+- corrigimos condições de shiny, mega, boss e extraordinário nas actions que não estavam ativando quando deveriam
+- regras de alarme sem som escolhido agora usam o som padrão, e configurações incompletas de teleport ou uso de item não derrubam mais o restante da sequência
+
+- personagens novos passaram a receber as regras básicas de proteção contra gm, incluindo aviso anti-bot, tratamento da seta e parada ao detectar staff
+- se chegar uma seta ou aviso de gm e nenhuma regra estiver configurada ou conseguir executar, o kizubot agora para a hunt, abre o report e manda o alerta mesmo assim
+- corrigimos a detecção da mensagem de verificação anti-bot em português, inglês e espanhol, e o alerta passou a orientar corretamente o uso de Ctrl+R
+- adicionamos uma reação opcional ao gm que faz a animação de provocação antes ou depois da resposta, quando a roupa equipada permite
+- reduzimos falsos positivos de gm causados por nomes comuns e pelo npc rocket member
+- quando chega um minigame anti-bot, o kizubot interrompe os caminhos que já estavam em andamento, evitando que um passo atrasado atrapalhe a resposta
+- corrigimos alarmes de player em outros andares que trocavam a configuração de andar superior pela de inferior
+- personagens alternativos da mesma conta passaram a ser ignorados pelo alarme de player na tela
+- corrigimos o bloqueio de alarmes repetidos e os padrões que podiam desligar o anti-spam sem querer
+- notificações do jogo sem título ou descrição não derrubam mais o sistema de alarmes
+- esclarecemos a configuração de personagem travado: ela participa tanto do alarme quanto da recuperação da rota e continua acessível mesmo com a notificação desligada
+- reforçamos as proteções gerais do kizubot e a separação dos dados entre contas, personagens e perfis
+
+- adicionamos um controle de qualidade x velocidade dentro da janela da vnc, aplicado na hora sem precisar reconectar
+- a vnc no celular ganhou botão pra abrir o teclado, atualização imediata do modo somente visualização e tentativa de conexão por um caminho alternativo quando necessário
+- reduzimos o atraso entre clicar e ver a resposta na máquina e corrigimos teclas que ficavam repetindo quando a conexão atrasava
+- otimizamos a exibição do jogo pra reduzir o peso de acompanhar as máquinas e melhorar a fluidez
+- revisamos a configuração inicial recomendada do cliente, corrigindo janelas fora da tela, avisos do bot escondidos e ajustes de desempenho
+- agora dá pra escolher pelo painel o idioma do jogo entre automático, inglês, português, espanhol e polonês, sem substituir todas as outras configurações
+- a preferência de idioma escolhida no próprio cliente passou a ser respeitada
+- Alt+I e Alt+R continuam recarregando as configs salvas do painel sem reiniciar o jogo; o antigo Alt+K foi removido, e o arquivo de settings passa a valer na próxima sessão
+- melhoramos a reconexão depois de quedas, corrigindo tarefas antigas que continuavam rodando e casos em que o jogo voltava, mas o painel não reconhecia a sessão online
+- o login passou a esperar a atualização do jogo terminar e dá mais tempo pra lista de personagens aparecer, evitando insistir numa tela que já mudou
+- corrigimos casos em que a tela de termos continuava aberta depois da tentativa de confirmação
+- corrigimos bloqueios de login causados por outras contas usando a mesma conexão, evitando que a tentativa de uma pessoa consumisse o limite de outra
+- acabamos com o antigo desligamento geral diário das máquinas; a rotina desse horário agora cuida das licenças, avisando quem está perto do vencimento e agindo quando a licença termina
+- reformulamos a criação e recriação das máquinas pra manter a operação ligada ao personagem correto, validar a preparação e recuperar a máquina anterior quando uma troca falhar
+- corrigimos recriações interrompidas que deixavam a máquina presa entre estados ou impediam uma nova tentativa
+- melhoramos as mensagens do recreate pra explicar personagem ocupado, dados ainda não sincronizados e operação em finalização, com novas tentativas automáticas por até 90 segundos nos casos previstos
+- a tela da conta do jogo passou a impedir login ou senha vazios, mostrar falhas de carregamento e oferecer uma nova tentativa quando a verificação das settings não funciona
+
+- reformulamos o sistema de alarmes pra salvar cada aviso antes de confirmar o recebimento e tentar novamente quando uma entrega falhar, reduzindo a perda de alertas em reinícios ou quedas de conexão
+- quando o painel reconecta, os alarmes que ainda estavam pendentes voltam pra fila de entrega da conta correta
+- o whatsapp dos alarmes agora pode ser conectado pelo painel usando qr code ou código de pareamento, com estado da conexão, teste de envio e confirmação antes de desconectar
+- unificamos o tratamento dos comandos enviados pelo whatsapp e telegram, incluindo consulta de inventário e suprimentos, tarefas pro personagem e resposta direta a um alarme encaminhado
+- as respostas desses comandos passaram a seguir o idioma configurado no painel, incluindo mensagens de erro
+- o !recreate voltou ao whatsapp num formato mais simples: vc manda o comando, recebe a lista dos seus computadores e escolhe pelo número
+- comandos feitos em grupo passaram a responder no privado de quem pediu, deixando no grupo só a confirmação e evitando expor informações do personagem
+- adicionamos transcrição de áudios no atendimento pelo whatsapp, incluindo pedido de transcrição reagindo com o cérebro e resposta no privado quando o áudio veio de um grupo
+- corrigimos falhas no recebimento de áudios e mídias depois de mudanças no whatsapp
+- melhoramos a entrega dos acessos e das mensagens de boas-vindas, com proteção contra entregas duplicadas e tratamento mais claro quando alguma etapa falha
+- os avisos de licença perto do vencimento ou desativada ganharam novas tentativas de envio e proteção contra duplicidade
+- melhoramos os avisos de máquina parada e manutenção pra não dizer que uma máquina já desligou quando o pedido ainda está sendo processado
+
+- a loja de waypoints passou a funcionar dentro do painel, mantendo o endereço próprio e avisando nossa equipe quando uma compra paga precisa ser entregue
+- o KizuScreen 2.0 foi reconstruído pra abrir mesmo sem depender do servidor antigo
+- disponibilizamos ferramentas recomendadas diretamente no site e adicionamos novos resultados, depoimentos internacionais e vídeos de hunt
+- atualizamos guias de acesso, configuração, atalhos e funcionamento das máquinas, além das orientações sobre banimentos
+- adicionamos uma página com orientações pra solicitar a exclusão dos seus dados
+- adicionamos um vídeo e um passo a passo na aba de alarmes pra configurar o telegram, com links diretos e teste de envio; o bot também responde ao /start com seu id e as instruções pra conectar no painel
+- corrigimos a exportação de perfis com acentos e caracteres especiais no nome, que podiam impedir o download
+- corrigimos a exclusão das configurações de um personagem, que podia terminar em erro; excluir um char também preserva o whatsapp usado pelos outros personagens da conta
+- corrigimos bloqueios indevidos no login e na troca de senha quando o sistema estava ocupado, evitando contar essas tentativas como senha errada
+- corrigimos a janela de compra e venda dos NPCs, que podia mostrar itens da aba errada ou ficar vazia ao alternar entre Buy e Sell
+- corrigimos o reconhecimento de capturas em português, inglês, polonês e espanhol, mantendo os alarmes e o controle de capturas por server save
+- o auto switch de hunt agora identifica quando não existe waypoint pra um pokémon e evita tentar baixar a mesma rota novamente a cada kill
+- os limites de dança e mensagem da proteção contra GM agora reiniciam a cada sessão, evitando acumular tentativas antigas e deixar o bot sem responder nas sessões seguintes
+- os alertas críticos de verificação e GM continuam sendo enviados mesmo com os alarmes comuns desligados ou depois que a proteção desativa o bot, desde que o alerta específico esteja habilitado
+- corrigimos janelas que podiam abrir parcialmente fora da tela em algumas resoluções, deixando botões do Offline Cam fora do alcance
+- corrigimos a lista de países e ddi que aparecia vazia nos alarmes ou incompleta na configuração da máquina, incluindo a seleção de países que compartilham o mesmo ddi
+- o indicador dos alarmes no painel agora só mostra a conexão como online quando ela está pronta pra receber os avisos, e alertas reenviados na reconexão não aparecem em dobro
+- depois de parar uma máquina, o painel e o grid atualizam o estado na hora, evitando continuar mostrando dados e controles antigos como se ela ainda estivesse ligada
+- nos grupos, quando nosso número pergunta “o que vocês acham”, o whatsapp agora chama todo mundo automaticamente, com ou sem acento e ponto de interrogação
+
+<p><strong>preparado, aguardando liberação</strong></p>
+
+- deixamos pronta a escolha do personagem dentro da conversa do !recreate, pra quem usa mais de um char na mesma máquina
+- deixamos preparado um aviso específico pra quando o jogo estiver esperando a autorização do aparelho por e-mail, evitando confundir esse bloqueio com uma máquina que ainda está iniciando
+
+::en
+- we added offline hunt recordings: you can now open the list with Alt+G, download available sessions, and watch them right in the game client to understand what happened while you weren't looking
+- the recording player now has 1x, 2x, 4x, and 8x speeds, selected before playback starts, plus messages in the client's language and a warning when you need to leave the game to watch
+- recordings now show the session's fps and ping and mark sections that couldn't be recorded, helping you spot freezes and connection issues
+- we improved recording uploads and recovery, including the end of the session; when a machine shuts down midway through, the part that can still be watched appears as a partial recording
+- we fixed several windows that opened during replay and covered everything, including gifts, mail, market, death, and missions; playback now also shows the card picked in the minigame
+- stopping a recording now ends playback and reopens the list without leaving the client stuck on the last frame
+- we added an option to draw the active route inside the game, off by default and automatically hidden when someone outside your party appears
+- we added the Home key to turn kizubot on or off while keeping the in-game button in sync
+- you can now choose by name which pokémon on your team should be called after login, so you don't have to memorize its position
+
+- we redesigned all 12 dashboard configuration screens with clearer explanations, goal-based navigation, and a guided path for anyone just getting started
+- the dashboard now has guided and slim styles alongside the default and compact modes, a terminal theme, and an initial setup to choose your language, theme, and look
+- we revised the mobile dashboard with simpler navigation, bigger buttons, easier forms and windows, and stats adapted to small screens
+- we fixed theme contrast to make text, buttons, icons, waypoints, and rules easier to see
+- the mobile menu now includes the same options as desktop, including theme, language, layout, streamer mode, password change, and sign out
+- we added community stats, off by default, so you can compare your settings with the most-used values, the median, and the common range among active players
+- setting times in actions is now easier: you can choose milliseconds, seconds, minutes, or hours for intervals, waits, and pauses
+- we fixed profile imports that ignored engine and humanization settings
+- we fixed an error when saving profiles shared between characters on the same account if the profile had been created on another char
+- we fixed the pokémon team screen, which could load saved data over changes you were still making
+- we simplified character creation with one direct question, a larger field, nickname validation, and an always-visible button
+- we fixed dashboard login issues with a saved language and nickname registration when there were spaces at the beginning or end
+- we organized waypoint uploads into one button next to search, with a loading indicator and no risk of saving the entire configuration by accident
+
+- we improved how the best tile for closing the box is chosen by considering move shapes, approaching creatures, and whether you're luring or in a combo
+- we added the option to turn your pokémon toward the target when it starts attacking or switches targets
+- we fixed getting stuck in front of gimmighoul: kizubot waits for the box without abandoning the lure, avoids pulling the pokémon away, and searches the body a second time so no coins are left behind
+- we fixed cases where the ball was thrown too early while the body still had loot; catch now waits longer, collection is repeated, and if the game still refuses the capture, the body goes back into the loot queue
+- we fixed catch attempts on creatures the game doesn't allow you to capture, preventing the hunt from getting stuck on an impossible attempt
+- the list of species ignored by catch no longer blocks catching a shiny of that species or erases its shiny, mega, and boss counts
+- we fixed another catch all issue that could forget the day's captures when reloading configs and try to catch the same species again before the next server save
+- we fixed rare loot counts that treated the drop alert and its collection as two different items
+- we improved reading kill and loot messages in Portuguese, Spanish, and Polish, including names with numbers like porygon2
+- session stats now show separately how many megas, shinies, and bosses of each species were defeated
+
+- we fixed conflicts between fishing, loot, and catch that made the character leave the water and lose the bait or kept catching blocked throughout the whole fishing session
+- we fixed a loop where starting to fish again canceled the path to loot and left bodies sitting there for several minutes
+- bodies that can no longer be reached no longer hold up the catch queue and block the rest of the hunt
+- potion after combo now waits for the combo to actually end instead of firing just because the box area was empty for a moment during the lure
+- cavebot no longer goes back several waypoints by mistake when the character is intentionally standing still for a combo, lure, loot, catch, or regeneration
+- you can now choose how to resume the route after gathering a resource: continue where you stopped, move to the closest waypoint ahead, or go back one waypoint
+- we fixed the conflict between the lure path and the path to bushes that made the character walk back and forth
+- we made several fixes to farming with fly, including changing floors, moving through areas without a floor, landing before gathering, choosing resources, and returning to the mount
+- anyone using a vehicle for farming can now choose whether the pokémon comes out when a target creature appears or only when the character takes damage
+- we fixed pathfinding when the chance of walking diagonally was low, avoiding excessive processing and failures on simple paths
+- we added an action to put the pokémon back in its ball outside combat, waiting for the combo or lure to end and preventing healing from calling it back right away
+
+- we fixed the pokémon being called and put away several times with high ping; kizubot now waits for the game's response before repeating the action
+- potion, food, and healing are checked again even when health isn't changing, and critical revive no longer fires repeatedly just because health stays below the limit
+- when the pokémon doesn't return after a revive, kizubot tries calling it again in a controlled way and stops when the game confirms
+- smart medicine recognizes bad conditions again and now checks whether they belong to your own pokémon, avoiding unnecessary medicine use
+- we fixed a timing calculation that made walking, combos, stuns, and revives much slower depending on the machine's load
+- we reduced repeated processing in the keep-distance and hold-position features, improving fps drops when turning the bot on
+- we fixed automatic berry rules that kept trying several times per second while the game still wouldn't allow the item to be replaced
+- we fixed shiny, mega, boss, and extraordinary conditions in actions that weren't activating when they should
+- alarm rules without a selected sound now use the default sound, and incomplete teleport or item-use settings no longer stop the rest of the sequence
+
+- new characters now receive the basic GM protection rules, including the anti-bot warning, arrow handling, and stopping when staff is detected
+- if a GM arrow or warning arrives and no rule is configured or able to run, kizubot now stops the hunt, opens the report, and sends the alert anyway
+- we fixed detection of the anti-bot verification message in Portuguese, English, and Spanish, and the alert now gives the correct instructions for using Ctrl+R
+- we added an optional GM reaction that plays the taunt animation before or after the response when the equipped outfit allows it
+- we reduced false GM positives caused by common names and the rocket member npc
+- when an anti-bot minigame arrives, kizubot interrupts paths already in progress so a delayed step doesn't interfere with the response
+- we fixed player alarms on other floors that swapped the upper-floor setting with the lower-floor one
+- alternate characters on the same account are now ignored by the on-screen player alarm
+- we fixed repeated-alarm blocking and defaults that could turn anti-spam off by accident
+- game notifications without a title or description no longer bring down the alarm system
+- we clarified the stuck character setting: it is used for both the alarm and route recovery, and it stays accessible even when the notification is off
+- we strengthened kizubot's general protections and the separation of data between accounts, characters, and profiles
+
+- we added a quality vs. speed control inside the VNC window that applies immediately without reconnecting
+- on mobile, VNC now has a button to open the keyboard, immediate updates to view-only mode, and an attempt to connect through an alternate route when needed
+- we reduced the delay between clicking and seeing the response on the machine, and fixed keys that kept repeating when the connection lagged
+- we optimized game display to make monitoring machines lighter and smoother
+- we revised the client's recommended initial setup, fixing off-screen windows, hidden bot warnings, and performance settings
+- you can now choose the game's language from the dashboard between automatic, English, Portuguese, Spanish, and Polish without replacing all other settings
+- the language preference selected in the client itself is now respected
+- you can still use Alt+I and Alt+R to reload saved dashboard configs without restarting the game; the old Alt+K was removed, and the settings file takes effect in the next session
+- we improved reconnection after drops, fixing old tasks that kept running and cases where the game returned but the dashboard didn't recognize the session as online
+- login now waits for the game update to finish and gives the character list more time to appear, avoiding repeated attempts on a screen that has already changed
+- we fixed cases where the terms screen stayed open after the confirmation attempt
+- we fixed login blocks caused by other accounts using the same connection, preventing one person's attempt from using up another person's limit
+- we ended the old daily shutdown of all machines; the routine at that time now handles licenses, warning anyone close to expiration and taking action when a license expires
+- we redesigned machine creation and recreation to keep the operation tied to the correct character, validate preparation, and recover the previous machine when a switch fails
+- we fixed interrupted recreations that left the machine stuck between states or prevented another attempt
+- we improved recreate messages to explain when a character is busy, data hasn't synced yet, or an operation is finishing, with automatic retries for up to 90 seconds in supported cases
+- the game account screen now blocks empty logins or passwords, shows loading failures, and offers another try when settings verification doesn't work
+
+- we redesigned the alarm system to save each alert before confirming receipt and retry when delivery fails, reducing lost alerts during restarts or connection drops
+- when the dashboard reconnects, alarms that are still pending return to the correct account's delivery queue
+- alarm whatsapp can now be connected through the dashboard using a qr code or pairing code, with connection status, a send test, and confirmation before disconnecting
+- we unified the handling of commands sent through whatsapp and telegram, including inventory and supply checks, character tasks, and direct replies to a forwarded alarm
+- replies to these commands now follow the language configured in the dashboard, including error messages
+- !recreate is back on whatsapp in a simpler format: send the command, get a list of your computers, and choose by number
+- commands sent in groups now reply privately to the person who asked, leaving only the confirmation in the group and avoiding exposing character information
+- we added audio transcription to whatsapp support, including transcription requests with the brain reaction and a private reply when the audio came from a group
+- we fixed failures when receiving audio and media after whatsapp changes
+- we improved access delivery and welcome messages, with protection against duplicate deliveries and clearer handling when a step fails
+- license expiration and deactivation notices now retry sending and avoid duplicates
+- we improved stopped-machine and maintenance notices so they don't say a machine has already shut down while the request is still being processed
+
+- the waypoint store now works inside the dashboard, keeps its own address, and alerts our team when a paid purchase needs to be delivered
+- we rebuilt KizuScreen 2.0 so it opens without depending on the old server
+- we made recommended tools available directly on the site and added new results, international testimonials, and hunt videos
+- we updated guides for access, configuration, hotkeys, and how the machines work, along with guidance about bans
+- we added a page with instructions for requesting deletion of your data
+- we added a video and step-by-step guide in the alarms tab for setting up telegram, with direct links and a send test; the bot also replies to /start with your id and instructions for connecting it to the dashboard
+- we fixed profile exports with accents and special characters in the name that could prevent the download
+- we fixed deleting a character's settings, which could end in an error; deleting a char also preserves the whatsapp used by other characters on the account
+- we fixed incorrect blocks during login and password changes when the system was busy, preventing those attempts from being counted as wrong passwords
+- we fixed the NPC buy and sell window, which could show items from the wrong tab or go empty when switching between Buy and Sell
+- we fixed capture recognition in Portuguese, English, Polish, and Spanish, keeping alarms and capture tracking by server save working
+- hunt auto switch now identifies when there is no waypoint for a pokémon and avoids trying to download the same route again after every kill
+- the GM protection limits for dances and messages now reset each session, preventing old attempts from piling up and leaving the bot unable to respond in later sessions
+- critical verification and GM alerts are still sent when common alarms are off or after protection disables the bot, as long as the specific alert is enabled
+- we fixed windows that could open partly off-screen at some resolutions, leaving Offline Cam buttons out of reach
+- we fixed the list of countries and country codes that appeared empty in alarms or incomplete in machine configuration, including selecting countries that share the same country code
+- the dashboard alarm indicator now only shows the connection as online when it's ready to receive alerts, and alerts resent after reconnecting no longer appear twice
+- after stopping a machine, the dashboard and grid update its state immediately instead of continuing to show old data and controls as if it were still running
+- in groups, when our number asks “o que vocês acham” (“what do you all think?”), whatsapp now tags everyone automatically, with or without accents and a question mark in the Portuguese phrase
+
+<p><strong>prepared, awaiting release</strong></p>
+
+- we have character selection inside the !recreate conversation ready for people who use more than one char on the same machine
+- we have a specific notice ready for when the game is waiting for device authorization by email, avoiding confusion between that block and a machine that's still starting
