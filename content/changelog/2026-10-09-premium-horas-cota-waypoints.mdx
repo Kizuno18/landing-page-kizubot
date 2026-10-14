@@ -1,0 +1,48 @@
+---
+slug: "pokexgames-kizubot-ia-premium-horas-cota-waypoints-1009"
+date: "2026-10-09"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Premium por Horas, Cota e Novas Ferramentas pra Hunt"
+  summary: "Novos pacotes Premium, Cota no painel, mapa interativo de waypoints e stun por pokémon, com melhorias nas actions, alarmes e recriação das máquinas."
+en:
+  title: "Hourly Premium, Cota, and New Hunting Tools"
+  summary: "New Premium packs, Cota in the dashboard, an interactive waypoint map, and per-Pokémon stun rules, with improvements to actions, alarms, and machine recreation."
+---
+
+::pt
+- os novos pacotes premium são de 300h, 720h e 2160h: só desconta enquanto o personagem está online no jogo. deslogou, o saldo pausa, as horas que sobrarem não vencem e renovar soma ao saldo que vc já tinha
+- adicionamos o cota no painel: conectando uma assinatura de IA paga e compatível, vc pode usar uma máquina com recursos do base sem pagar outra licença kizubot. o uso depende da cota disponível, e quando ela renovar vc pode recriar a máquina
+- novo mapa interativo no editor de waypoints: vc pode montar e ajustar a rota direto no mapa do jogo, navegar entre andares, buscar pokémons e recursos, adicionar, arrastar ou apagar pontos, desfazer alterações e reparar trechos do caminho. tb corrigimos o save que dizia que salvou sem guardar as mudanças
+- refizemos o stun por pokémon: vc escolhe quando usar, incluindo antes do revive, contra criaturas especiais, no começo do combo ou em emergência. tem regras avançadas, opção de copiar pro time e tutorial guiado no painel
+- agora vc escolhe por criatura extraordinária se o kizubot faz o combo direto ou aproxima o pokémon e espera a box. essa espera tb reage à vida baixa ou ao personagem preso. adicionamos a opção de voltar depois do combo pra uma criatura que apareceu enquanto o bot estava ocupado, além de alarmes opcionais pra sua lista
+- melhoramos as actions de trocar pokémon, curar e voltar pro anterior, com prioridade, limite de duração e cooldown por regra de até 24h. corrigimos atalhos que ignoravam condições de combate e revisamos o preset de cura emergencial
+- corrigimos golpes de suporte atrapalhando o combo, novos loops de chamar e guardar pokémon depois de reconectar, pesca presa esperando golpes indisponíveis, rotas pulando escadas e shiny fora da fila de catch. tb atualizamos o reconhecimento de itens e corpos do jogo
+- corrigimos ganhos de xp que zeravam ou apareciam absurdos e estatísticas que paravam depois de alguns drops. as gravações voltam depois de morte e relog rápido, mais janelas deixam de tampar o replay e suas opções de gráfico e áudio são mantidas ao relogar enquanto o painel não enviar ajustes novos
+- agora vc pode criar a conta antes de comprar uma licença e confirmar seu whatsapp por código. a compra aceita cartão e boleto, com liberação depois da confirmação do pagamento. simplificamos a ativação e corrigimos uma falha que impedia usar no painel uma licença comprada na própria conta
+- melhoramos os alarmes pra avisos novos não ficarem atrás de tentativas antigas, corrigimos horários de avisos atrasados e adicionamos uma segunda forma de envio pros alertas críticos de verificação anti-bot e gm. tb corrigimos avisos de morte e desconexão abafados perto de NPCs
+- fizemos novas correções no recreate pra não deixar tentativas falhas presas, facilitar a recuperação da máquina e permitir usar uma licença nova quando a anterior já acabou e a máquina antiga foi liberada. tb corrigimos casos em que o personagem estava caçando, mas aparecia no painel como se ainda estivesse entrando
+- no dia 11/10 o kizubot completa 2 anos e entra no terceiro: premium 720h por R$ 300 e 2160h por R$ 900 até 05/11, inclusive, no horário de Brasília. em 06/11 passam a R$ 450 e R$ 1200; o 300h fica em R$ 260. o site ganhou versão em inglês, melhorias no celular e balões que vc pode estourar
+
+<p class="mt-4">o base continua por dias corridos, pra quem usa a máquina o dia inteiro: por exemplo, 3 personagens em sequência, 8h cada, somando 24h por dia, um personagem por vez. licenças premium antigas por dias não são convertidas automaticamente pra horas</p>
+
+<p class="mt-4">a versão atualizada do bot está disponível em máquinas novas e na próxima recriação pelo painel. as máquinas em uso não foram reiniciadas pra aplicar essa atualização</p>
+
+::en
+- the new premium packs come with 300h, 720h, or 2160h: hours are only used while your character is online in the game. log out and your balance pauses, unused hours don't expire, and renewing adds to the balance you already have
+- we added cota to the dashboard: connect a paid, compatible AI subscription and you can use a machine with base resources without paying for another kizubot license. usage depends on the available quota, and you can recreate the machine when that quota renews
+- new interactive map in the waypoint editor: build and adjust your route right on the game map, switch floors, search for pokémon and resources, add, drag, or delete points, undo changes, and repair sections of the path. we also fixed saving that claimed success without keeping your changes
+- we rebuilt stun settings per pokémon: choose when to use it, including before revive, against special creatures, at combo start, or in an emergency. there are advanced rules, a copy-to-team option, and a guided dashboard tutorial
+- you can now choose per extraordinary creature whether kizubot starts the combo right away or brings your pokémon closer and waits for the box. that wait also reacts to low character health or getting stuck. we added an option to return after the combo for a creature that appeared while the bot was busy, plus optional alarms for your list
+- we improved actions that swap pokémon, heal, and return to the previous one, with priority, a sequence duration limit, and per-rule cooldowns of up to 24h. we fixed hotkeys that ignored combat conditions and revised the emergency healing preset
+- we fixed support moves interfering with the combo, more summon-and-recall loops after reconnecting, fishing stuck waiting for unavailable moves, routes skipping stairs, and shinies missing from the catch queue. we also updated recognition of game items and corpses
+- we fixed xp gains that dropped to zero or showed absurd values, and stats that stopped updating after some drops. recordings resume after death and a quick relog, more windows stop covering replays, and your graphics and audio choices survive relogging unless the dashboard sends new settings
+- you can now create your account before buying a license and confirm your whatsapp number with a code. purchases accept cards and boleto, with access released after payment is confirmed. we simplified activation and fixed an issue that prevented using a license bought through your own account
+- we improved alarms so new alerts don't get stuck behind old retries, fixed timestamps on delayed alerts, and added an alternate delivery path for critical anti-bot verification and gm alerts. we also fixed death and disconnection alerts being suppressed near NPCs
+- we made more recreate fixes to stop failed attempts getting stuck, make machine recovery easier, and let you use a new license once the previous one has ended and the old machine has been released. we also fixed cases where your character was hunting but the dashboard still showed it joining the game
+- kizubot turns 2 on october 11 and starts its third year: premium 720h is R$ 300 and 2160h is R$ 900 through november 5, inclusive, in Brasília time. from november 6 they become R$ 450 and R$ 1200; 300h stays at R$ 260. the site now has an english version, mobile improvements, and balloons you can pop
+
+<p class="mt-4">base still runs on calendar days, for people who use the machine all day: for example, 3 characters in sequence, 8h each, totaling 24h a day, one character at a time. older calendar-day premium licenses don't automatically turn into hourly packs</p>
+
+<p class="mt-4">the updated bot version is available on new machines and on your next recreation through the dashboard. machines already in use were not restarted to apply this update</p>
