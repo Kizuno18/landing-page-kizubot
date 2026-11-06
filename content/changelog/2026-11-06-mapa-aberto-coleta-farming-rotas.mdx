@@ -1,0 +1,46 @@
+---
+slug: "pokexgames-kizubot-ia-mapa-aberto-coleta-farming-rotas-1106"
+date: "2026-11-06"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Mapa Aberto, Farming por Recurso e Editor de Rotas"
+  summary: "As máquinas agora começam com o mapa do jogo aberto, o farming ganhou chaves por tipo de recurso e coleta sem descer da montaria, e o painel ganhou editor de rotas e golpes próprios por pokémon."
+en:
+  title: "Open Map, Per-Resource Farming, and Route Editor"
+  summary: "Machines now start with the game map already revealed, farming gained per-resource switches and collecting without dismounting, and the dashboard gained a route editor and your own moves per Pokémon."
+---
+
+::pt
+- as máquinas agora já vêm com o mapa do jogo aberto: o minimapa começa revelado em vez de vazio, então dá pra ver a região toda desde o primeiro login. também atualizamos o cliente do pokexgames pra versão de 06/11
+- depois da atualização do pokexgames em outubro, a coleta de loot e de profissões voltou a funcionar, respeitando o autoloot do vip e os requisitos de cada profissão, e o bot passou a usar a toolbag nova. atualizamos os nomes de itens e os preços de npc do jogo
+- o farming ganhou chaves por tipo de recurso, pra vc escolher o que coletar. o personagem também coleta voando ou montado, sem descer do veículo. corrigimos o atraso manual do lure por criatura: com o atraso automático desligado, valores acima de 2s faziam o lure andar mais rápido
+- com o farming desligado, o bot para de desenhar os corpses mesmo com "desenhar corpses" ligado
+- o stun antes do revive ficou mais seguro: o bot só guarda o pokémon depois que o servidor confirma o stun, e não perde stuns nem dano contínuo que ainda estavam em andamento
+- o login automático fecha a janela de novidades que o jogo abre depois de uma atualização, que deixava o personagem parado na tela de entrada. também corrigimos a criação de máquina que era desfeita quando o jogo se atualizava sozinho durante a inicialização
+- novo editor de rotas no painel: vc cria uma rota do zero com rascunho salvo, edita pelo celular com toque e só sobrescreve a rota antiga quando confirmar
+- agora vc escolhe se o bot usa os seus próprios golpes ou o modelo da comunidade. os golpes detectados ficam salvos por personagem
+- colocamos tutoriais em vídeo no cavebot e no cota e um tutorial de boas-vindas na configuração da máquina. deixamos claro que o cota é opcional e separado das licenças pagas: o antigravity exige assinatura google ai pro ou ultra
+- corrigimos o painel voltando configurações que vc já tinha mudado, como um time apagado ou o desenho de corpses, quando vc salvava uma aba antiga do engine ou do combat. os botões do editor de waypoints também pararam de salvar o cavebot sem vc pedir
+- melhoramos a confirmação do whatsapp no cadastro: entrar no grupo agora é opcional. o recibo de compra passou a chegar também em números antigos de whatsapp, cadastrados sem o 9 na frente
+- fizemos mais correções no recreate e no stop pra máquina não ficar presa depois de uma sessão encerrada, e o alarme de ping alto parou de repetir o mesmo aviso
+- a promoção de aniversário terminou em 05/11. o premium 720h voltou pra R$ 450 e o 2160h pra R$ 1200, e o 300h continua R$ 260. valeu demais a todo mundo que comemorou os 2 anos com a gente
+
+<p class="mt-4">a versão atualizada do bot está disponível em máquinas novas e na próxima recriação pelo painel. as máquinas em uso não foram reiniciadas pra aplicar essa atualização</p>
+
+::en
+- machines now come with the game map already revealed: the minimap starts filled in instead of blank, so you can see the whole area from your first login. we also updated the pokexgames client to the november 6 version
+- after the october pokexgames update, loot and profession collection works again, respecting vip autoloot and each profession's requirements, and the bot now uses the new toolbag. we updated the game's item names and npc prices
+- farming gained switches per resource type, so you choose what to collect. your character also collects while flying or mounted, without leaving the vehicle. we fixed the manual per-creature lure delay: with automatic delay off, values above 2s made the lure move faster
+- with farming turned off, the bot stops drawing corpses even when "draw corpses" is on
+- stun before revive is safer: the bot only recalls your pokémon after the server confirms the stun, and it no longer loses stuns or damage over time that were still running
+- automatic login now closes the news window the game opens after an update, which left your character stuck on the login screen. we also fixed machine creation being rolled back when the game updated itself during startup
+- new route editor in the dashboard: build a route from scratch with a saved draft, edit it on your phone with touch, and only replace the old route when you confirm
+- you can now choose whether the bot uses your own moves or the community template. detected moves are saved per character
+- we added video tutorials to cavebot and cota, plus a welcome tutorial in machine setup. we made it clear that cota is optional and separate from paid licenses: antigravity requires a google ai pro or ultra subscription
+- we fixed the dashboard bringing back settings you had already changed, such as a deleted team or corpse drawing, when you saved an older engine or combat tab. waypoint editor buttons also stopped saving cavebot without you asking
+- we improved whatsapp confirmation at sign-up: joining the group is now optional. purchase receipts now also reach older whatsapp numbers registered without the leading 9
+- we made more recreate and stop fixes so a machine doesn't get stuck after a session ends, and the high ping alarm no longer repeats the same alert
+- the anniversary promotion ended on november 5. premium 720h is back to R$ 450 and 2160h to R$ 1200, and 300h stays at R$ 260. thanks a lot to everyone who celebrated kizubot's 2nd birthday with us
+
+<p class="mt-4">the updated bot version is available on new machines and on your next recreation through the dashboard. machines already in use were not restarted to apply this update</p>
