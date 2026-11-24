@@ -1,0 +1,46 @@
+---
+slug: "pokexgames-kizubot-ia-modo-projeto-shiny-tutoriais-1123"
+date: "2026-11-23"
+tags: ["new-feature", "improvement", "bug-fix"]
+hasEnglish: true
+pt:
+  title: "Modo Projeto Shiny, Tutoriais em Vídeo e Alarmes Mais Confiáveis"
+  summary: "Chegou o Modo Projeto Shiny, que segue a rota matando pokémon um por um sem parar pra lurar, o painel ganhou tutoriais em vídeo em quase todas as páginas e corrigimos a lista de ignorados, a captura e o envio de alarmes no whatsapp."
+en:
+  title: "Shiny Project Mode, Video Tutorials, and More Reliable Alarms"
+  summary: "Shiny Project Mode is here: it keeps walking the route and kills pokémon one by one without stopping to lure. The dashboard gained video tutorials on almost every page, and we fixed the ignore list, catching and WhatsApp alarm delivery."
+---
+
+::pt
+- novo modo projeto shiny, em combat > geral: o personagem segue a rota sem parar e ataca o pokémon mais próximo, um por vez, enquanto o seu pokémon mata com ataque e skills de alvo. ele também joga pokébola e coleta o loot andando quando dá. vc escolhe a distância máxima do alvo e quantos pokémon precisam estar juntos pra usar skill em área. tem um preset pronto em perfis > carregar preset
+- a lista de ignorados em combat > criaturas voltou a funcionar: com atacar todos ou matar especiais ligado, o bot atacava criaturas que vc tinha mandado ignorar
+- o bot parou de jogar pokébola sem parar num corpo que o servidor recusava, o que deixava o personagem parado no primeiro lure. as tentativas agora têm intervalo e limite
+- quando o combo forçado encontra um pokémon de npc que parece selvagem e o servidor recusa todo ataque, o bot desiste dele por 2 minutos e segue pra outro alvo
+- corrigimos o revive em loop de pokémon sem golpes configurados no time pokémon
+- o transporte de profissão parou de montar e desmontar em loop, e coletando montado (inclusive no veículo de evento) o personagem não tenta mais sair andando do lugar. também atualizamos o cliente do pokexgames pra versão de 18/11
+- colocamos 18 tutoriais curtos em vídeo no botão "assistir tutorial" de várias páginas, em português e em inglês: ping, rota com o recorder, alt + i, pokémon pacífico, time pokémon, stun e revive, captura, alarmes, loot, gm na tela, pc desligado por inatividade e mais
+- o painel agora protege suas configs de abas antigas: se vc salvar uma aba aberta antes de outra mudança, nada é sobrescrito e o painel pede pra recarregar. isso evita perder, por exemplo, a lista de captura
+- premium é por máquina, e o painel agora explica isso na home e no farming. os outros personagens do seu login também passam a mostrar o plano certo quando todas as suas máquinas têm o mesmo plano
+- os alarmes no whatsapp passaram a chegar em números antigos, cadastrados com ou sem o 9 na frente. o aviso de pc desligado e o de whatsapp desconectado também, e o !recreate e os comandos pelo número do kizubot reconhecem seu número nas duas formas
+- o datacenter dos eua voltou pro checkout, com os mesmos preços do premium das outras regiões
+- o painel ficou mais leve e rápido, o checkout parou de quebrar quando o navegador traduz a página, e a configuração da máquina dá retorno na hora: o botão de ativar diz o que falta preencher e clicar no código da licença ou no endereço do vnc copia. contas novas também vêm com a pokébola reserva certa na captura
+- e uns fixes menores: máquinas com muitas marcações no mapa voltaram a iniciar, a página de alarmes ficou toda traduzida, a humanização avisa quando o save foi recusado em vez de dizer que salvou, e a espera do recreate para e pede login de novo quando a sessão expira
+
+<p class="mt-4">a versão atualizada do bot está disponível em máquinas novas e na próxima recriação pelo painel. as máquinas em uso não foram reiniciadas pra aplicar essa atualização</p>
+
+::en
+- new shiny project mode, in combat > general: your character keeps walking the route and attacks the closest pokémon, one at a time, while your pokémon kills it with auto attack and target skills. it also throws pokéballs and collects loot on the move when it can. you choose the max target distance and how many pokémon must be grouped to use area skills. there's a ready preset in profiles > load preset
+- the ignore list in combat > creatures works again: with attack all or kill special creatures on, the bot attacked creatures you told it to ignore
+- the bot stopped throwing pokéballs nonstop at a corpse the server refused, which left your character stuck at the first lure. throws now have a gap and a limit
+- when the forced combo finds an npc's pokémon that looks wild and the server refuses every attack, the bot gives up on it for 2 minutes and moves to another target
+- we fixed the revive loop for pokémon without moves set in the pokémon team
+- the profession transport stopped mounting and dismounting in a loop, and while collecting mounted (event vehicle included) your character no longer tries to walk off the spot. we also updated the pokexgames client to the november 18 version
+- we added 18 short video tutorials behind the "watch tutorial" button on several pages, in portuguese and english: ping, recording routes, alt + i, peaceful pokémon, pokémon team, stun and revive, catching, alarms, loot, a gm on screen, idle shutdown and more
+- the dashboard now protects your settings from old tabs: if you save a tab opened before another change, nothing gets overwritten and the dashboard asks you to reload. this keeps you from losing things like your catch list
+- premium is per machine, and the dashboard now explains that on home and farming. your login's other characters also show the right plan when all your machines have the same plan
+- whatsapp alarms now reach older numbers, saved with or without the 9 after the area code. the shutdown notice and the disconnected whatsapp notice too, and !recreate and the commands on the kizubot number recognize your number either way
+- the us datacenter is back in checkout, with the same premium prices as the other regions
+- the dashboard got lighter and faster, checkout no longer breaks when the browser translates the page, and machine setup responds right away: the activate button tells you what's missing and clicking the license code or the vnc address copies it. new accounts also get the right reserve pokéball in catch
+- plus some smaller fixes: machines with lots of map marks start again, the alarms page is fully translated, humanization tells you when a save was refused instead of saying it saved, and the recreate wait stops and asks you to log in again when your session expires
+
+<p class="mt-4">the updated bot version is available on new machines and on the next recreate from the dashboard. machines in use were not restarted to apply this update</p>
