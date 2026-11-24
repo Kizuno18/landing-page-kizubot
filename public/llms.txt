@@ -1,0 +1,49 @@
+# KizuBot - cloud automation bot for PokeXGames (PXG)
+
+> KizuBot is an automation bot for PokeXGames (PXG) that runs on KizuBot's cloud machines, so the player's PC can stay off. It covers cavebot routes, combat, healing, catching (with shiny, mega and boss recognition), farming, fishing, party play, custom action rules and WhatsApp/Telegram alarms, all configured from a web panel. The site is in Brazilian Portuguese, with an English home page, videos and changelog.
+
+## Getting started
+
+- [Home (pt-BR)](https://www.kizubot.com/): features, plans and FAQ
+- [Home (English)](https://www.kizubot.com/en)
+- [Create an account](https://painel.kizubot.com/register)
+- [Machine Setup](https://www.kizubot.com/docs/machine-setup): prepare the cloud machine and open a session
+- [GridView / Panel](https://www.kizubot.com/docs/gridview): the web control panel
+- [Safety tips](https://www.kizubot.com/tips): ban risk and how to reduce it; no bot is 100% safe
+- [KizuBot vs other PXG bots](https://www.kizubot.com/comparativo): cloud bot vs bots that run on your PC
+
+## Documentation
+
+- [Documentation index](https://www.kizubot.com/docs): 17 guides
+- [Setup Guide](https://www.kizubot.com/docs/setup): first configuration and Pokémon move presets
+- [Cavebot](https://www.kizubot.com/docs/cavebot): waypoints, Recorder, route actions
+- [Combat](https://www.kizubot.com/docs/combat): targeting, luring, combos, stun, loot
+- [Healing](https://www.kizubot.com/docs/healing): revive, potions, berries, smart swap
+- [Catch](https://www.kizubot.com/docs/catch): pokéballs, catch lists, shiny hunting
+- [Farming](https://www.kizubot.com/docs/farming): resource gathering, headbutt, vehicle
+- [Fishing](https://www.kizubot.com/docs/fishing): automatic fishing
+- [Alarms](https://www.kizubot.com/docs/alarms): WhatsApp and Telegram notifications
+- [Statistics](https://www.kizubot.com/docs/statistics): session, loot and catch reports
+- [Party](https://www.kizubot.com/docs/party): automatic party and team hunts
+- [Engine](https://www.kizubot.com/docs/engine): GM protection and general behavior
+- [Actions](https://www.kizubot.com/docs/actions): custom rules with conditions and actions
+- [Account](https://www.kizubot.com/docs/account): profiles and settings
+- [Humanization](https://www.kizubot.com/docs/humanization): timing variance, micro-pauses, hunt breaks
+- [KizuAI](https://www.kizubot.com/docs/kizu-ai): assistant inside the panel
+
+## Updates and media
+
+- [Changelog](https://www.kizubot.com/changelog): every update with its date, October 2024 to today
+- [RSS feed](https://www.kizubot.com/feed.xml)
+- [Videos](https://www.kizubot.com/videos): hunts, shiny projects, fishing and farming recorded with KizuBot
+- [YouTube channel](https://www.youtube.com/@kizubotpxg)
+
+## Plans
+
+Base plans count calendar days; Premium plans count hours only while the character is online. Current prices are on https://www.kizubot.com/#pricing (BRL). There is no free plan and no lifetime licence.
+
+## Contact
+
+- Website: https://www.kizubot.com
+- WhatsApp (sales and support): +55 48 9159-4946
+- Site source code: https://github.com/Kizuno18/landing-page-kizubot
